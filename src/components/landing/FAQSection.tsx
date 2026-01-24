@@ -22,7 +22,7 @@ const faqs = [
   },
   {
     question: "Is the installation process complicated?",
-    answer: "Not at all! Our certified technicians handle everything. Most installations take less than 30 minutes and work with standard Brunei door types. We'll ensure everything is properly set up before we leave.",
+    answer: "Not at all! Our certified technicians handle everything. Most installations take less than 3 hours and work with standard Brunei door types. We'll ensure everything is properly set up before we leave.",
   },
   {
     question: "What happens if the battery dies?",
