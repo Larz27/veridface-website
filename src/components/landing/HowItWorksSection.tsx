@@ -39,39 +39,39 @@ const steps = [
 
 export function HowItWorksSection() {
   return (
-    <section id="how-it-works" className="section-wrapper bg-primary text-primary-foreground">
+    <section id="how-it-works" className="section-wrapper bg-background">
       <div className="section-container">
         <div className="text-center mb-16">
-          <h2 className="text-3xl md:text-4xl lg:text-5xl font-heading font-bold mb-4">
+          <h2 className="text-3xl md:text-4xl lg:text-5xl font-heading font-bold text-foreground mb-4">
             Get Started in <span className="text-accent">4 Simple Steps</span>
           </h2>
-          <p className="text-lg md:text-xl text-primary-foreground/70 max-w-2xl mx-auto">
+          <p className="text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto">
             From consultation to installation, we make upgrading your security effortless.
           </p>
         </div>
 
         <div className="relative">
           {/* Connection Line (Desktop) */}
-          <div className="hidden lg:block absolute top-16 left-[12%] right-[12%] h-0.5 bg-accent/30" />
+          <div className="hidden lg:block absolute top-16 left-[12%] right-[12%] h-0.5 bg-primary/30" />
           
           <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-8">
             {steps.map((item, index) => (
               <div key={index} className="relative text-center">
                 {/* Step Number */}
-                <div className="relative z-10 w-16 h-16 rounded-full bg-accent text-accent-foreground flex items-center justify-center mx-auto mb-6 font-heading font-bold text-xl shadow-glow">
+                <div className="relative z-10 w-16 h-16 rounded-full bg-primary text-primary-foreground flex items-center justify-center mx-auto mb-6 font-heading font-bold text-xl shadow-glow">
                   {item.step}
                 </div>
                 
                 {/* Icon */}
-                <div className="w-12 h-12 rounded-lg bg-primary-foreground/10 flex items-center justify-center mx-auto mb-4">
-                  <item.icon size={24} className="text-accent" />
+                <div className="w-12 h-12 rounded-lg bg-primary/10 flex items-center justify-center mx-auto mb-4">
+                  <item.icon size={24} className="text-primary" />
                 </div>
                 
                 {/* Content */}
-                <h3 className="text-xl font-heading font-bold mb-3">
+                <h3 className="text-xl font-heading font-bold text-foreground mb-3">
                   {item.title}
                 </h3>
-                <p className="text-primary-foreground/70 leading-relaxed">
+                <p className="text-muted-foreground leading-relaxed">
                   {item.description}
                 </p>
               </div>
