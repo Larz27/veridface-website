@@ -21,7 +21,7 @@ const steps = [
     step: 2,
     icon: Wrench,
     title: "Professional Installation",
-    description: "Our certified technicians install your smart lock in under 30 minutes.",
+    description: "Our certified technicians install your smart lock in under 3 hours.",
   },
   {
     step: 3,

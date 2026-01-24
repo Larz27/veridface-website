@@ -2,14 +2,10 @@
  * COMPONENT: Footer
  * 
  * Contains contact info, social links, and legal links.
- * 
- * CUSTOMIZATION:
- * - Update contact information
- * - Add your actual social media URLs
- * - Modify footer links as needed
  */
 
-import { MapPin, Phone, Mail, Facebook, Instagram, Linkedin } from "lucide-react";
+import { MapPin, Phone, Mail, Instagram } from "lucide-react";
+import verifaceLogo from "@/assets/veridface-logo.png";
 
 const quickLinks = [
   { name: "Features", href: "#features" },
@@ -24,12 +20,6 @@ const legalLinks = [
   { name: "Warranty Info", href: "#" },
 ];
 
-const socialLinks = [
-  { icon: Facebook, href: "#", label: "Facebook" },
-  { icon: Instagram, href: "#", label: "Instagram" },
-  { icon: Linkedin, href: "#", label: "LinkedIn" },
-];
-
 export function Footer() {
   return (
     <footer id="contact" className="bg-foreground text-background py-16">
@@ -38,12 +28,11 @@ export function Footer() {
           {/* Brand Column */}
           <div className="lg:col-span-1">
             <div className="flex items-center gap-2 mb-4">
-              <div className="w-10 h-10 rounded-lg bg-accent flex items-center justify-center">
-                <span className="text-accent-foreground font-heading font-bold text-xl">S</span>
-              </div>
-              <span className="font-heading font-bold text-xl">
-                SmartLock<span className="text-accent">BN</span>
-              </span>
+              <img 
+                src={verifaceLogo} 
+                alt="Veridface Logo" 
+                className="h-12 w-auto brightness-0 invert"
+              />
             </div>
             <p className="text-background/70 mb-6 leading-relaxed">
               Brunei's trusted provider of smart home security solutions. 
@@ -51,16 +40,15 @@ export function Footer() {
             </p>
             {/* Social Links */}
             <div className="flex gap-4">
-              {socialLinks.map((social, index) => (
-                <a
-                  key={index}
-                  href={social.href}
-                  aria-label={social.label}
-                  className="w-10 h-10 rounded-lg bg-background/10 flex items-center justify-center hover:bg-accent hover:text-accent-foreground transition-colors"
-                >
-                  <social.icon size={20} />
-                </a>
-              ))}
+              <a
+                href="https://instagram.com/veridface.home"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Instagram"
+                className="w-10 h-10 rounded-lg bg-background/10 flex items-center justify-center hover:bg-primary hover:text-primary-foreground transition-colors"
+              >
+                <Instagram size={20} />
+              </a>
             </div>
           </div>
 
@@ -72,7 +60,7 @@ export function Footer() {
                 <li key={index}>
                   <a
                     href={link.href}
-                    className="text-background/70 hover:text-accent transition-colors"
+                    className="text-background/70 hover:text-primary transition-colors"
                   >
                     {link.name}
                   </a>
@@ -89,7 +77,7 @@ export function Footer() {
                 <li key={index}>
                   <a
                     href={link.href}
-                    className="text-background/70 hover:text-accent transition-colors"
+                    className="text-background/70 hover:text-primary transition-colors"
                   >
                     {link.name}
                   </a>
@@ -103,22 +91,24 @@ export function Footer() {
             <h4 className="font-heading font-semibold text-lg mb-4">Contact Us</h4>
             <ul className="space-y-4">
               <li className="flex items-start gap-3">
-                <MapPin size={20} className="text-accent flex-shrink-0 mt-0.5" />
+                <MapPin size={20} className="text-primary flex-shrink-0 mt-0.5" />
                 <span className="text-background/70">
-                  Unit 123, Gadong Commercial Centre,<br />
-                  Bandar Seri Begawan, Brunei
+                  iCentre, Simpang 32-37,<br />
+                  Kg Anggerek Desa, Jalan Berakas BB3713,<br />
+                  Bandar Seri Begawan,<br />
+                  Negara Brunei Darussalam
                 </span>
               </li>
               <li className="flex items-center gap-3">
-                <Phone size={20} className="text-accent flex-shrink-0" />
-                <a href="tel:+673XXXXXXX" className="text-background/70 hover:text-accent transition-colors">
-                  +673 XXX XXXX
+                <Phone size={20} className="text-primary flex-shrink-0" />
+                <a href="https://wa.me/6737331298" target="_blank" rel="noopener noreferrer" className="text-background/70 hover:text-primary transition-colors">
+                  +673 7331298
                 </a>
               </li>
               <li className="flex items-center gap-3">
-                <Mail size={20} className="text-accent flex-shrink-0" />
-                <a href="mailto:hello@smartlockbn.com" className="text-background/70 hover:text-accent transition-colors">
-                  hello@smartlockbn.com
+                <Mail size={20} className="text-primary flex-shrink-0" />
+                <a href="mailto:yazid@veridface.com" className="text-background/70 hover:text-primary transition-colors">
+                  yazid@veridface.com
                 </a>
               </li>
             </ul>
@@ -128,7 +118,7 @@ export function Footer() {
         {/* Bottom Bar */}
         <div className="border-t border-background/10 pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
           <p className="text-background/50 text-sm">
-            © {new Date().getFullYear()} SmartLock BN. All rights reserved.
+            © {new Date().getFullYear()} Veridface. All rights reserved.
           </p>
           <p className="text-background/50 text-sm">
             Made with ❤️ in Brunei Darussalam
