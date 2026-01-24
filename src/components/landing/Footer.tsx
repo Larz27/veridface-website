@@ -14,17 +14,11 @@ const quickLinks = [
   { name: "FAQ", href: "#faq" },
 ];
 
-const legalLinks = [
-  { name: "Privacy Policy", href: "#" },
-  { name: "Terms of Service", href: "#" },
-  { name: "Warranty Info", href: "#" },
-];
-
 export function Footer() {
   return (
     <footer id="contact" className="bg-foreground text-background py-16">
       <div className="section-container">
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-12 mb-12">
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-12 mb-12">
           {/* Brand Column */}
           <div className="lg:col-span-1">
             <div className="flex items-center gap-2 mb-4">
@@ -57,23 +51,6 @@ export function Footer() {
             <h4 className="font-heading font-semibold text-lg mb-4">Quick Links</h4>
             <ul className="space-y-3">
               {quickLinks.map((link, index) => (
-                <li key={index}>
-                  <a
-                    href={link.href}
-                    className="text-background/70 hover:text-primary transition-colors"
-                  >
-                    {link.name}
-                  </a>
-                </li>
-              ))}
-            </ul>
-          </div>
-
-          {/* Legal Links */}
-          <div>
-            <h4 className="font-heading font-semibold text-lg mb-4">Legal</h4>
-            <ul className="space-y-3">
-              {legalLinks.map((link, index) => (
                 <li key={index}>
                   <a
                     href={link.href}

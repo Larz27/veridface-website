@@ -10,7 +10,7 @@ const testimonials = [
   {
     name: "Haji Ahmad",
     role: "Homeowner, Kiarong",
-    content: "We installed their smart lock at our family home last month. My wife and I can monitor when our children come home from school. It's given us incredible peace of mind.",
+    content: "We installed Veridface's smart lock at our family home last month. My wife and I can monitor when our children come home from school. It's given us incredible peace of mind.",
     rating: 5,
   },
   {
@@ -22,7 +22,7 @@ const testimonials = [
   {
     name: "Pg. Mohammad",
     role: "Property Investor, Salambigar",
-    content: "I manage 5 rental properties. SmartLock lets me give temporary access to tenants and contractors without ever meeting them in person. Game changer!",
+    content: "I manage 5 rental properties. Veridface's smart lock lets me give temporary access to tenants and contractors without ever meeting them in person. Game changer!",
     rating: 5,
   },
 ];

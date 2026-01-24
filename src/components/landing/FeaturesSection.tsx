@@ -21,7 +21,7 @@ const features = [
   {
     icon: Smartphone,
     title: "Remote Access Control",
-    description: "Lock or unlock your door from anywhere in the world using the SmartLock BN mobile app.",
+    description: "Lock or unlock your door from anywhere in the world using the Tuya mobile app.",
   },
   {
     icon: History,
@@ -46,7 +46,7 @@ const features = [
   {
     icon: Battery,
     title: "Long Battery Life",
-    description: "Up to 12 months of battery life with low-battery alerts sent to your phone.",
+    description: "Up to 6 months of battery life with low-battery alerts sent to your phone.",
   },
 ];
 

@@ -6,6 +6,7 @@
 
 import { Button } from "@/components/ui/button";
 import { ArrowRight, Check, Phone, Mail } from "lucide-react";
+import earlyBirdPromo from "@/assets/early-bird-promo.png";
 
 const ctaFeatures = [
   "Free on-site consultation",
@@ -27,20 +28,31 @@ export function PricingCTASection() {
       </div>
       
       <div className="section-container relative z-10">
-        <div className="max-w-4xl mx-auto text-center">
+        <div className="max-w-5xl mx-auto">
           {/* Badge */}
-          <div className="inline-flex items-center gap-2 bg-primary/10 text-primary px-4 py-2 rounded-full mb-6">
-            <span className="text-sm font-medium">Limited Time Offer</span>
+          <div className="text-center mb-8">
+            <div className="inline-flex items-center gap-2 bg-primary/10 text-primary px-4 py-2 rounded-full mb-6">
+              <span className="text-sm font-medium">Limited Time Offer</span>
+            </div>
+            
+            <h2 className="text-3xl md:text-4xl lg:text-5xl font-heading font-bold text-foreground mb-6">
+              Ready to Upgrade Your Security?
+            </h2>
+            
+            <p className="text-lg md:text-xl text-muted-foreground mb-10 max-w-2xl mx-auto">
+              Join Brunei homeowners and businesses who have already made the switch to smart security.
+              Get started with a free consultation today.
+            </p>
           </div>
-          
-          <h2 className="text-3xl md:text-4xl lg:text-5xl font-heading font-bold text-foreground mb-6">
-            Ready to Upgrade Your Security?
-          </h2>
-          
-          <p className="text-lg md:text-xl text-muted-foreground mb-10 max-w-2xl mx-auto">
-            Join Brunei homeowners and businesses who have already made the switch to smart security.
-            Get started with a free consultation today.
-          </p>
+
+          {/* Early Bird Promo Image */}
+          <div className="flex justify-center mb-10">
+            <img 
+              src={earlyBirdPromo} 
+              alt="Early Bird Offer - SmartLock B$350 (Regular price B$450) - Promo ends 27 January" 
+              className="max-w-md w-full rounded-2xl shadow-xl"
+            />
+          </div>
 
           {/* Features List */}
           <div className="flex flex-wrap justify-center gap-x-8 gap-y-3 mb-10">
