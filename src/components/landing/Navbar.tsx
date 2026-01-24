@@ -2,16 +2,12 @@
  * COMPONENT: Navigation Bar
  * 
  * A sticky header with logo, navigation links, and CTA button.
- * 
- * CUSTOMIZATION:
- * - Update navLinks array to modify navigation items
- * - Replace logo text with your actual logo
- * - Adjust CTA button text and link in the Button component
  */
 
 import { useState, useEffect } from "react";
 import { Button } from "@/components/ui/button";
 import { Menu, X } from "lucide-react";
+import verifaceLogo from "@/assets/veridface-logo.png";
 
 const navLinks = [
   { name: "Home", href: "#home" },
@@ -20,6 +16,8 @@ const navLinks = [
   { name: "Pricing", href: "#pricing" },
   { name: "Contact", href: "#contact" },
 ];
+
+const WHATSAPP_LINK = "https://wa.me/6737331298";
 
 export function Navbar() {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -45,12 +43,11 @@ export function Navbar() {
         <div className="flex items-center justify-between h-16 md:h-20">
           {/* Logo */}
           <a href="#home" className="flex items-center gap-2">
-            <div className="w-10 h-10 rounded-lg bg-accent flex items-center justify-center">
-              <span className="text-accent-foreground font-heading font-bold text-xl">S</span>
-            </div>
-            <span className="font-heading font-bold text-xl text-foreground">
-              SmartLock<span className="text-accent">BN</span>
-            </span>
+            <img 
+              src={verifaceLogo} 
+              alt="Veridface Logo" 
+              className="h-10 md:h-12 w-auto"
+            />
           </a>
 
           {/* Desktop Navigation */}
@@ -69,7 +66,11 @@ export function Navbar() {
 
           {/* CTA Button */}
           <div className="hidden md:block">
-            <Button variant="nav" size="lg">
+            <Button 
+              variant="nav" 
+              size="lg"
+              onClick={() => window.open(WHATSAPP_LINK, '_blank')}
+            >
               Get a Quote
             </Button>
           </div>
@@ -98,7 +99,12 @@ export function Navbar() {
                   {link.name}
                 </a>
               ))}
-              <Button variant="nav" size="lg" className="mt-2">
+              <Button 
+                variant="nav" 
+                size="lg" 
+                className="mt-2"
+                onClick={() => window.open(WHATSAPP_LINK, '_blank')}
+              >
                 Get a Quote
               </Button>
             </div>

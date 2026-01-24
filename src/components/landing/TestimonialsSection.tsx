@@ -2,11 +2,6 @@
  * COMPONENT: Testimonials/Social Proof Section
  * 
  * Displays customer testimonials and trust indicators.
- * 
- * CUSTOMIZATION:
- * - Replace testimonials with real customer feedback
- * - Update names, roles, and photos
- * - Add or remove testimonials as needed
  */
 
 import { Star, Quote } from "lucide-react";
@@ -14,19 +9,19 @@ import { Star, Quote } from "lucide-react";
 const testimonials = [
   {
     name: "Haji Ahmad",
-    role: "Homeowner, Gadong",
-    content: "We installed SmartLock at our family home last year. My wife and I can monitor when our children come home from school. It's given us incredible peace of mind.",
+    role: "Homeowner, Kiarong",
+    content: "We installed their smart lock at our family home last month. My wife and I can monitor when our children come home from school. It's given us incredible peace of mind.",
     rating: 5,
   },
   {
     name: "Sarah Lim",
-    role: "Office Manager, BSB",
-    content: "Managing keys for 30 employees was a nightmare. SmartLock simplified everything — now I can add or remove access in seconds from my phone.",
+    role: "Office Manager, Bengkurong",
+    content: "Managing keys for 30 employees was a nightmare. Veridface's smart lock simplified everything. Now I can add or remove access in seconds from my phone.",
     rating: 5,
   },
   {
     name: "Pg. Mohammad",
-    role: "Property Investor, Tutong",
+    role: "Property Investor, Salambigar",
     content: "I manage 5 rental properties. SmartLock lets me give temporary access to tenants and contractors without ever meeting them in person. Game changer!",
     rating: 5,
   },
@@ -41,7 +36,7 @@ export function TestimonialsSection() {
             Trusted by <span className="text-accent">Bruneians</span>
           </h2>
           <p className="section-subheading mx-auto">
-            See what our customers across Brunei are saying about SmartLock BN.
+            See what our customers across Brunei are saying about Veridface.
           </p>
         </div>
 
