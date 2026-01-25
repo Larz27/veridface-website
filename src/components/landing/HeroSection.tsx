@@ -7,25 +7,17 @@
 import { Button } from "@/components/ui/button";
 import { Shield, Smartphone, ArrowRight } from "lucide-react";
 import heroImage from "@/assets/hero-smartlock.jpg";
-
 const WHATSAPP_LINK = "https://wa.me/6737331298";
-
 export function HeroSection() {
-  return (
-    <section
-      id="home"
-      className="relative min-h-screen flex items-center pt-20 overflow-hidden"
-      style={{ background: "var(--gradient-hero)" }}
-    >
+  return <section id="home" className="relative min-h-screen flex items-center pt-20 overflow-hidden" style={{
+    background: "var(--gradient-hero)"
+  }}>
       {/* Background Pattern */}
       <div className="absolute inset-0 opacity-[0.03]">
-        <div
-          className="absolute inset-0"
-          style={{
-            backgroundImage: `radial-gradient(circle at 1px 1px, hsl(var(--primary)) 1px, transparent 0)`,
-            backgroundSize: "40px 40px",
-          }}
-        />
+        <div className="absolute inset-0" style={{
+        backgroundImage: `radial-gradient(circle at 1px 1px, hsl(var(--primary)) 1px, transparent 0)`,
+        backgroundSize: "40px 40px"
+      }} />
       </div>
 
       <div className="section-container relative z-10">
@@ -39,26 +31,17 @@ export function HeroSection() {
             </h1>
 
             {/* Subheadline */}
-            <p className="text-lg md:text-xl text-muted-foreground mb-8 max-w-xl mx-auto lg:mx-0 animate-fade-up stagger-1">
-              Smart locks designed for Brunei homes and offices. Control access from anywhere,
-              anytime — no keys required. Experience security that fits your modern lifestyle.
-            </p>
+            <p className="text-lg md:text-xl text-muted-foreground mb-8 max-w-xl mx-auto lg:mx-0 animate-fade-up stagger-1">Smart locks designed for Brunei homes and offices. Control access from anywhere, anytime, no keys required. Experience security that fits your modern lifestyle.</p>
 
             {/* CTAs */}
             <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start animate-fade-up stagger-2">
-              <Button 
-                variant="hero" 
-                size="xl"
-                onClick={() => window.open(WHATSAPP_LINK, '_blank')}
-              >
+              <Button variant="hero" size="xl" onClick={() => window.open(WHATSAPP_LINK, '_blank')}>
                 Request a Demo
                 <ArrowRight size={20} />
               </Button>
-              <Button 
-                variant="hero-outline" 
-                size="xl"
-                onClick={() => document.getElementById('how-it-works')?.scrollIntoView({ behavior: 'smooth' })}
-              >
+              <Button variant="hero-outline" size="xl" onClick={() => document.getElementById('how-it-works')?.scrollIntoView({
+              behavior: 'smooth'
+            })}>
                 <Smartphone size={20} />
                 See How It Works
               </Button>
@@ -86,11 +69,7 @@ export function HeroSection() {
           {/* Hero Image */}
           <div className="relative animate-fade-up stagger-2">
             <div className="relative z-10">
-              <img
-                src={heroImage}
-                alt="Veridface Smart Lock - Modern smart lock installed on a door"
-                className="w-full max-w-lg mx-auto rounded-2xl shadow-hero"
-              />
+              <img src={heroImage} alt="Veridface Smart Lock - Modern smart lock installed on a door" className="w-full max-w-lg mx-auto rounded-2xl shadow-hero" />
             </div>
             {/* Decorative Elements */}
             <div className="absolute -top-4 -right-4 w-72 h-72 bg-accent/20 rounded-full blur-3xl" />
@@ -98,6 +77,5 @@ export function HeroSection() {
           </div>
         </div>
       </div>
-    </section>
-  );
+    </section>;
 }
