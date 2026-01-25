@@ -26,7 +26,7 @@ export function Footer() {
           {/* Brand Column */}
           <div className="lg:col-span-1">
             <div className="flex items-center gap-2 mb-4">
-              
+              <img src={verifaceLogo} alt="Veridface Logo" className="h-12 w-auto" />
             </div>
             <p className="text-background/70 mb-6 leading-relaxed">
 
