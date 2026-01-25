@@ -7,7 +7,7 @@
 import { Button } from "@/components/ui/button";
 import { ArrowRight, Check, Phone, Mail } from "lucide-react";
 import earlyBirdPromo from "@/assets/early-bird-promo.png";
-const ctaFeatures = ["Free on-site consultation", "Professional installation included", "1-year warranty on all products", "24/7 customer support", "30-day money-back guarantee"];
+const ctaFeatures = ["Free on-site consultation", "Professional installation included", "1-year warranty on all products", "24/7 customer support"];
 const WHATSAPP_LINK = "https://wa.me/6737331298";
 export function PricingCTASection() {
   return <section id="pricing" className="section-wrapper bg-background relative overflow-hidden">
