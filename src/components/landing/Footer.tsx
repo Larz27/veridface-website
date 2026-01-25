@@ -56,7 +56,7 @@ Brunei's trusted provider of smart home security solutions. Making homes and off
             <h4 className="font-heading font-semibold text-lg mb-4">Contact Us</h4>
             <ul className="space-y-4">
               <li className="flex items-start gap-3">
-                <MapPin size={20} className="text-primary flex-shrink-0 mt-0.5" />
+                <MapPin size={20} className="text-white flex-shrink-0 mt-0.5" />
                 <span className="text-background/70">
                   iCentre, Simpang 32-37,<br />
                   Kg Anggerek Desa, Jalan Berakas BB3713,<br />
@@ -65,13 +65,13 @@ Brunei's trusted provider of smart home security solutions. Making homes and off
                 </span>
               </li>
               <li className="flex items-center gap-3">
-                <Phone size={20} className="text-primary flex-shrink-0" />
+                <Phone size={20} className="text-white flex-shrink-0" />
                 <a href="https://wa.me/6737331298" target="_blank" rel="noopener noreferrer" className="text-background/70 hover:text-primary transition-colors">
                   +673 7331298
                 </a>
               </li>
               <li className="flex items-center gap-3">
-                <Mail size={20} className="text-primary flex-shrink-0" />
+                <Mail size={20} className="text-white flex-shrink-0" />
                 <a href="mailto:yazid@veridface.com" className="text-background/70 hover:text-primary transition-colors">
                   yazid@veridface.com
                 </a>
