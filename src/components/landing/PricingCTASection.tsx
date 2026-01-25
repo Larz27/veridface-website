@@ -37,7 +37,7 @@ export function PricingCTASection() {
 
           {/* Early Bird Promo Image */}
           <div className="flex justify-center mb-10">
-            <img alt="Early Bird Offer - SmartLock B$350 (Regular price B$450) - Promo ends 27 January" className="max-w-md w-full rounded-2xl shadow-xl" src="/lovable-uploads/1b7a7e75-6b81-4ea3-a197-2ef64aaddc6e.png" />
+            <img alt="Early Bird Offer - SmartLock B$350 (Regular price B$450) - Promo ends 27 January" className="max-w-md w-full rounded-2xl shadow-xl" src="/lovable-uploads/9b4f524c-369d-4d33-8cd8-f8f6a519fc2a.png" />
           </div>
 
           {/* Features List */}
