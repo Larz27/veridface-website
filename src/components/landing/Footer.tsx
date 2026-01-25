@@ -85,9 +85,7 @@ Brunei's trusted provider of smart home security solutions. Making homes and off
           <p className="text-background/50 text-sm">
             © {new Date().getFullYear()} Veridface. All rights reserved.
           </p>
-          <p className="text-background/50 text-sm">
-            Made with ❤️ in Brunei Darussalam
-          </p>
+          
         </div>
       </div>
     </footer>;
