@@ -17,7 +17,7 @@ const faqs = [{
   answer: "Not at all! Our certified technicians handle everything. Most installations take less than 3 hours and work with standard Brunei door types. We'll ensure everything is properly set up before we leave."
 }, {
   question: "What happens if the battery dies?",
-  answer: "You'll receive low battery notifications weeks in advance via the app. If the battery does die, you can use the included backup key or apply a 9V battery to the external emergency power port to unlock the door."
+  answer: "You'll receive low battery notifications weeks in advance via the app. If the battery does die, you can use the included backup key to unlock the door."
 }, {
   question: "Can I give temporary access to guests or workers?",
   answer: "Yes! You can create temporary PIN codes that expire after a set time or number of uses. Perfect for Airbnb guests, cleaners, or contractors. You can also schedule access for specific days and hours."
