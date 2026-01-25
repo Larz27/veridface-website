@@ -1,10 +1,18 @@
 /**
  * COMPONENT: Testimonials/Social Proof Section
  * 
- * Displays customer testimonials and trust indicators.
+ * Displays customer testimonials and trust indicators with auto-sliding carousel.
  */
 
 import { Star, Quote } from "lucide-react";
+import { useEffect, useState } from "react";
+import useEmblaCarousel from "embla-carousel-react";
+import Autoplay from "embla-carousel-autoplay";
+import {
+  Carousel,
+  CarouselContent,
+  CarouselItem,
+} from "@/components/ui/carousel";
 
 const testimonials = [
   {
@@ -25,6 +33,12 @@ const testimonials = [
     content: "I manage 5 rental properties. Veridface's smart lock lets me give temporary access to tenants and contractors without ever meeting them in person. Game changer!",
     rating: 5,
   },
+  {
+    name: "Azizah Hassan",
+    role: "Shop Owner, Kuala Belait",
+    content: "Running a retail store means different staff coming at different hours. Veridface's smart lock lets me set specific access times for each employee. Security has never been easier!",
+    rating: 5,
+  },
 ];
 
 export function TestimonialsSection() {
@@ -40,46 +54,59 @@ export function TestimonialsSection() {
           </p>
         </div>
 
-        <div className="grid md:grid-cols-3 gap-6 lg:gap-8">
-          {testimonials.map((testimonial, index) => (
-            <div
-              key={index}
-              className="feature-card relative"
-            >
-              {/* Quote Icon */}
-              <Quote className="absolute top-6 right-6 text-accent/20" size={40} />
-              
-              {/* Rating */}
-              <div className="flex gap-1 mb-4">
-                {Array.from({ length: testimonial.rating }).map((_, i) => (
-                  <Star key={i} className="text-accent fill-accent" size={18} />
-                ))}
-              </div>
-              
-              {/* Content */}
-              <p className="text-muted-foreground mb-6 relative z-10 leading-relaxed">
-                "{testimonial.content}"
-              </p>
-              
-              {/* Author */}
-              <div className="flex items-center gap-4">
-                <div className="w-12 h-12 rounded-full bg-accent/10 flex items-center justify-center">
-                  <span className="text-accent font-heading font-bold text-lg">
-                    {testimonial.name.charAt(0)}
-                  </span>
-                </div>
-                <div>
-                  <p className="font-heading font-semibold text-foreground">
-                    {testimonial.name}
+        <Carousel
+          opts={{
+            align: "start",
+            loop: true,
+          }}
+          plugins={[
+            Autoplay({
+              delay: 4000,
+              stopOnInteraction: false,
+            }),
+          ]}
+          className="w-full"
+        >
+          <CarouselContent className="-ml-4">
+            {testimonials.map((testimonial, index) => (
+              <CarouselItem key={index} className="pl-4 md:basis-1/2 lg:basis-1/3">
+                <div className="feature-card relative h-full">
+                  {/* Quote Icon */}
+                  <Quote className="absolute top-6 right-6 text-accent/20" size={40} />
+                  
+                  {/* Rating */}
+                  <div className="flex gap-1 mb-4">
+                    {Array.from({ length: testimonial.rating }).map((_, i) => (
+                      <Star key={i} className="text-accent fill-accent" size={18} />
+                    ))}
+                  </div>
+                  
+                  {/* Content */}
+                  <p className="text-muted-foreground mb-6 relative z-10 leading-relaxed">
+                    "{testimonial.content}"
                   </p>
-                  <p className="text-sm text-muted-foreground">
-                    {testimonial.role}
-                  </p>
+                  
+                  {/* Author */}
+                  <div className="flex items-center gap-4 mt-auto">
+                    <div className="w-12 h-12 rounded-full bg-accent/10 flex items-center justify-center">
+                      <span className="text-accent font-heading font-bold text-lg">
+                        {testimonial.name.charAt(0)}
+                      </span>
+                    </div>
+                    <div>
+                      <p className="font-heading font-semibold text-foreground">
+                        {testimonial.name}
+                      </p>
+                      <p className="text-sm text-muted-foreground">
+                        {testimonial.role}
+                      </p>
+                    </div>
+                  </div>
                 </div>
-              </div>
-            </div>
-          ))}
-        </div>
+              </CarouselItem>
+            ))}
+          </CarouselContent>
+        </Carousel>
       </div>
     </section>
   );
