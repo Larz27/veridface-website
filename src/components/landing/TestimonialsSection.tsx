@@ -6,8 +6,7 @@
 
 import { Star, Quote } from "lucide-react";
 import { useEffect, useState } from "react";
-import useEmblaCarousel from "embla-carousel-react";
-import Autoplay from "embla-carousel-autoplay";
+import AutoScroll from "embla-carousel-auto-scroll";
 import {
   Carousel,
   CarouselContent,
@@ -60,9 +59,10 @@ export function TestimonialsSection() {
             loop: true,
           }}
           plugins={[
-            Autoplay({
-              delay: 4000,
+            AutoScroll({
+              speed: 1,
               stopOnInteraction: false,
+              stopOnMouseEnter: true,
             }),
           ]}
           className="w-full"
