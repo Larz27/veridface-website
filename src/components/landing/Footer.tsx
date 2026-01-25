@@ -6,41 +6,34 @@
 
 import { MapPin, Phone, Mail, Instagram } from "lucide-react";
 import verifaceLogo from "@/assets/veridface-logo.png";
-
-const quickLinks = [
-  { name: "Features", href: "#features" },
-  { name: "How It Works", href: "#how-it-works" },
-  { name: "Pricing", href: "#pricing" },
-  { name: "FAQ", href: "#faq" },
-];
-
+const quickLinks = [{
+  name: "Features",
+  href: "#features"
+}, {
+  name: "How It Works",
+  href: "#how-it-works"
+}, {
+  name: "Pricing",
+  href: "#pricing"
+}, {
+  name: "FAQ",
+  href: "#faq"
+}];
 export function Footer() {
-  return (
-    <footer id="contact" className="bg-foreground text-background py-16">
+  return <footer id="contact" className="bg-foreground text-background py-16">
       <div className="section-container">
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-12 mb-12">
           {/* Brand Column */}
           <div className="lg:col-span-1">
             <div className="flex items-center gap-2 mb-4">
-              <img 
-                src={verifaceLogo} 
-                alt="Veridface Logo" 
-                className="h-12 w-auto brightness-0 invert"
-              />
+              
             </div>
             <p className="text-background/70 mb-6 leading-relaxed">
-              Brunei's trusted provider of smart home security solutions. 
-              Making homes and offices safer, one lock at a time.
-            </p>
+
+Brunei's trusted provider of smart home security solutions. Making homes and offices safer, one lock at a time.</p>
             {/* Social Links */}
             <div className="flex gap-4">
-              <a
-                href="https://instagram.com/veridface.home"
-                target="_blank"
-                rel="noopener noreferrer"
-                aria-label="Instagram"
-                className="w-10 h-10 rounded-lg bg-background/10 flex items-center justify-center hover:bg-primary hover:text-primary-foreground transition-colors"
-              >
+              <a href="https://instagram.com/veridface.home" target="_blank" rel="noopener noreferrer" aria-label="Instagram" className="w-10 h-10 rounded-lg bg-background/10 flex items-center justify-center hover:bg-primary hover:text-primary-foreground transition-colors">
                 <Instagram size={20} />
               </a>
             </div>
@@ -50,16 +43,11 @@ export function Footer() {
           <div>
             <h4 className="font-heading font-semibold text-lg mb-4">Quick Links</h4>
             <ul className="space-y-3">
-              {quickLinks.map((link, index) => (
-                <li key={index}>
-                  <a
-                    href={link.href}
-                    className="text-background/70 hover:text-primary transition-colors"
-                  >
+              {quickLinks.map((link, index) => <li key={index}>
+                  <a href={link.href} className="text-background/70 hover:text-primary transition-colors">
                     {link.name}
                   </a>
-                </li>
-              ))}
+                </li>)}
             </ul>
           </div>
 
@@ -102,6 +90,5 @@ export function Footer() {
           </p>
         </div>
       </div>
-    </footer>
-  );
+    </footer>;
 }
