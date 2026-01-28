@@ -6,7 +6,27 @@
 
 import { Button } from "@/components/ui/button";
 import { ArrowRight, Check, Phone, Mail } from "lucide-react";
-import earlyBirdPromo from "@/assets/early-bird-promo.png";
+import AutoScroll from "embla-carousel-auto-scroll";
+import {
+  Carousel,
+  CarouselContent,
+  CarouselItem,
+} from "@/components/ui/carousel";
+
+import promoMain from "@/assets/promo-main.png";
+import promo400 from "@/assets/promo-400.png";
+import promo400_2 from "@/assets/promo-400-2.png";
+import promo250 from "@/assets/promo-250.png";
+import promo200 from "@/assets/promo-200.png";
+
+const promoImages = [
+  { src: promoMain, alt: "Main Product - B$430 Smart Lock with Face Recognition" },
+  { src: promo400, alt: "B$400 Smart Lock - Biometric Unlock" },
+  { src: promo400_2, alt: "B$400 Smart Lock - Face Recognition Model" },
+  { src: promo250, alt: "B$300 Glass Door Smart Lock" },
+  { src: promo200, alt: "B$250 Smart Lock" },
+];
+
 const ctaFeatures = ["Free on-site consultation", "Professional installation included", "1-year warranty on all products", "24/7 customer support"];
 const WHATSAPP_LINK = "https://wa.me/6737331298";
 export function PricingCTASection() {
@@ -35,9 +55,34 @@ export function PricingCTASection() {
             </p>
           </div>
 
-          {/* Early Bird Promo Image */}
+          {/* Promo Images Carousel */}
           <div className="flex justify-center mb-10">
-            <img alt="Early Bird Offer - SmartLock B$350 (Regular price B$450) - Promo ends 27 January" className="max-w-md w-full rounded-2xl shadow-xl" src="/lovable-uploads/9b4f524c-369d-4d33-8cd8-f8f6a519fc2a.png" />
+            <Carousel
+              opts={{
+                align: "center",
+                loop: true,
+              }}
+              plugins={[
+                AutoScroll({
+                  speed: 1,
+                  stopOnInteraction: false,
+                  stopOnMouseEnter: true,
+                }),
+              ]}
+              className="w-full max-w-lg"
+            >
+              <CarouselContent>
+                {promoImages.map((image, index) => (
+                  <CarouselItem key={index} className="flex justify-center">
+                    <img
+                      src={image.src}
+                      alt={image.alt}
+                      className="max-w-md w-full rounded-2xl shadow-xl"
+                    />
+                  </CarouselItem>
+                ))}
+              </CarouselContent>
+            </Carousel>
           </div>
 
           {/* Features List */}
