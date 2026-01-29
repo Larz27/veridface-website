@@ -50,7 +50,7 @@ export function HeroSection() {
             {/* Trust Indicators */}
             <div className="flex items-center gap-8 mt-10 justify-center lg:justify-start animate-fade-up stagger-3">
               <div className="text-center">
-                <p className="text-2xl font-heading font-bold text-foreground">10+</p>
+                <p className="text-2xl font-heading font-bold text-foreground">Free</p>
                 <p className="text-sm text-muted-foreground">Installations</p>
               </div>
               <div className="w-px h-10 bg-border" />
