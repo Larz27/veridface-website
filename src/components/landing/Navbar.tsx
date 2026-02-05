@@ -5,6 +5,7 @@
  */
 
 import { useState, useEffect } from "react";
+import { useNavigate, useLocation } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { Menu, X } from "lucide-react";
 import verifaceLogo from "@/assets/veridface-logo.png";
@@ -22,6 +23,10 @@ const WHATSAPP_LINK = "https://wa.me/6737331298";
 export function Navbar() {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const navigate = useNavigate();
+  const location = useLocation();
+  
+  const isEnterprise = location.pathname === "/enterprise";
 
   useEffect(() => {
     const handleScroll = () => {
@@ -64,8 +69,32 @@ export function Navbar() {
             ))}
           </div>
 
-          {/* CTA Button */}
-          <div className="hidden md:block">
+          {/* Toggle + CTA */}
+          <div className="hidden md:flex items-center gap-4">
+            {/* Home/Enterprise Toggle */}
+            <div className="flex items-center bg-muted/50 rounded-full p-1 border border-border/50">
+              <button
+                onClick={() => navigate("/")}
+                className={`px-4 py-1.5 rounded-full text-sm font-medium transition-all duration-200 ${
+                  !isEnterprise 
+                    ? "bg-primary text-primary-foreground shadow-sm" 
+                    : "text-muted-foreground hover:text-foreground"
+                }`}
+              >
+                Home
+              </button>
+              <button
+                onClick={() => navigate("/enterprise")}
+                className={`px-4 py-1.5 rounded-full text-sm font-medium transition-all duration-200 ${
+                  isEnterprise 
+                    ? "bg-primary text-primary-foreground shadow-sm" 
+                    : "text-muted-foreground hover:text-foreground"
+                }`}
+              >
+                Enterprise
+              </button>
+            </div>
+            
             <Button 
               variant="nav" 
               size="lg"
@@ -89,6 +118,36 @@ export function Navbar() {
         {isMobileMenuOpen && (
           <div className="md:hidden py-4 border-t border-border/50 animate-fade-in">
             <div className="flex flex-col gap-4">
+              {/* Mobile Toggle */}
+              <div className="flex items-center bg-muted/50 rounded-full p-1 border border-border/50 w-fit">
+                <button
+                  onClick={() => {
+                    navigate("/");
+                    setIsMobileMenuOpen(false);
+                  }}
+                  className={`px-4 py-1.5 rounded-full text-sm font-medium transition-all duration-200 ${
+                    !isEnterprise 
+                      ? "bg-primary text-primary-foreground shadow-sm" 
+                      : "text-muted-foreground hover:text-foreground"
+                  }`}
+                >
+                  Home
+                </button>
+                <button
+                  onClick={() => {
+                    navigate("/enterprise");
+                    setIsMobileMenuOpen(false);
+                  }}
+                  className={`px-4 py-1.5 rounded-full text-sm font-medium transition-all duration-200 ${
+                    isEnterprise 
+                      ? "bg-primary text-primary-foreground shadow-sm" 
+                      : "text-muted-foreground hover:text-foreground"
+                  }`}
+                >
+                  Enterprise
+                </button>
+              </div>
+              
               {navLinks.map((link) => (
                 <a
                   key={link.name}
