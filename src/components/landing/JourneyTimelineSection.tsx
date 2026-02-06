@@ -2,7 +2,7 @@
  * COMPONENT: Journey Timeline Section
  * 
  * Shows the company's journey milestones in a visual timeline format with photos.
- * Hover over cards to view them in full screen mode.
+ * Click on cards to view them in full screen mode.
  */
 
 import { useState } from "react";
@@ -77,15 +77,11 @@ const milestones = [
 export function JourneyTimelineSection() {
   const [expandedIndex, setExpandedIndex] = useState<number | null>(null);
 
-  const handleMouseEnter = (index: number) => {
+  const handleClick = (index: number) => {
     // Only expand if the milestone has media
     if (milestones[index].image || milestones[index].video) {
       setExpandedIndex(index);
     }
-  };
-
-  const handleMouseLeave = () => {
-    setExpandedIndex(null);
   };
 
   const expandedMilestone = expandedIndex !== null ? milestones[expandedIndex] : null;
@@ -145,7 +141,7 @@ export function JourneyTimelineSection() {
                     }`}
                   >
                     <div
-                      onMouseEnter={() => handleMouseEnter(index)}
+                      onClick={() => handleClick(index)}
                       className={`bg-background rounded-xl p-6 border shadow-sm transition-all duration-300 hover:shadow-lg overflow-hidden ${
                         isUpcoming
                           ? "border-accent/50 border-dashed"
@@ -203,7 +199,7 @@ export function JourneyTimelineSection() {
                       
                       {hasMedia && (
                         <p className="text-xs text-muted-foreground/60 mt-3 italic">
-                          Hover to expand
+                          Click to expand
                         </p>
                       )}
                     </div>
@@ -222,9 +218,9 @@ export function JourneyTimelineSection() {
       {expandedMilestone && (
         <div
           className="fixed inset-0 z-50 flex items-center justify-center bg-black/80 backdrop-blur-sm animate-fade-in"
-          onMouseLeave={handleMouseLeave}
+          onClick={() => setExpandedIndex(null)}
         >
-          <div className="relative w-full max-w-5xl max-h-[90vh] m-4 bg-background rounded-2xl overflow-hidden shadow-2xl animate-scale-in">
+          <div className="relative w-full max-w-5xl max-h-[90vh] m-4 bg-background rounded-2xl overflow-hidden shadow-2xl animate-scale-in" onClick={(e) => e.stopPropagation()}>
             {/* Close button */}
             <button
               onClick={() => setExpandedIndex(null)}
