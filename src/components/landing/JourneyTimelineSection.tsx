@@ -2,9 +2,11 @@
  * COMPONENT: Journey Timeline Section
  * 
  * Shows the company's journey milestones in a visual timeline format with photos.
+ * Hover over cards to view them in full screen mode.
  */
 
-import { Trophy, Home, Building2, MapPin, Store, Calendar, Rocket } from "lucide-react";
+import { useState } from "react";
+import { Trophy, Home, Building2, MapPin, Store, Calendar, Rocket, X } from "lucide-react";
 
 // Journey images
 import hackathonImg from "@/assets/journey/hackathon.jpg";
@@ -73,6 +75,21 @@ const milestones = [
 ];
 
 export function JourneyTimelineSection() {
+  const [expandedIndex, setExpandedIndex] = useState<number | null>(null);
+
+  const handleMouseEnter = (index: number) => {
+    // Only expand if the milestone has media
+    if (milestones[index].image || milestones[index].video) {
+      setExpandedIndex(index);
+    }
+  };
+
+  const handleMouseLeave = () => {
+    setExpandedIndex(null);
+  };
+
+  const expandedMilestone = expandedIndex !== null ? milestones[expandedIndex] : null;
+
   return (
     <section id="journey" className="section-wrapper bg-card">
       <div className="section-container">
@@ -94,6 +111,7 @@ export function JourneyTimelineSection() {
             {milestones.map((milestone, index) => {
               const isEven = index % 2 === 0;
               const isUpcoming = milestone.type === "upcoming";
+              const hasMedia = milestone.image || milestone.video;
               
               return (
                 <div
@@ -127,11 +145,12 @@ export function JourneyTimelineSection() {
                     }`}
                   >
                     <div
-                      className={`bg-background rounded-xl p-6 border shadow-sm transition-all duration-300 hover:shadow-md overflow-hidden ${
+                      onMouseEnter={() => handleMouseEnter(index)}
+                      className={`bg-background rounded-xl p-6 border shadow-sm transition-all duration-300 hover:shadow-lg overflow-hidden ${
                         isUpcoming
                           ? "border-accent/50 border-dashed"
                           : "border-border/50"
-                      }`}
+                      } ${hasMedia ? "cursor-pointer hover:scale-[1.02]" : ""}`}
                     >
                       {/* Image */}
                       {milestone.image && (
@@ -181,6 +200,12 @@ export function JourneyTimelineSection() {
                       <p className="text-muted-foreground text-sm leading-relaxed">
                         {milestone.description}
                       </p>
+                      
+                      {hasMedia && (
+                        <p className="text-xs text-muted-foreground/60 mt-3 italic">
+                          Hover to expand
+                        </p>
+                      )}
                     </div>
                   </div>
 
@@ -192,6 +217,65 @@ export function JourneyTimelineSection() {
           </div>
         </div>
       </div>
+
+      {/* Full Screen Overlay */}
+      {expandedMilestone && (
+        <div
+          className="fixed inset-0 z-50 flex items-center justify-center bg-black/80 backdrop-blur-sm animate-fade-in"
+          onMouseLeave={handleMouseLeave}
+        >
+          <div className="relative w-full max-w-5xl max-h-[90vh] m-4 bg-background rounded-2xl overflow-hidden shadow-2xl animate-scale-in">
+            {/* Close hint */}
+            <div className="absolute top-4 right-4 z-10 flex items-center gap-2 bg-black/50 text-white px-3 py-1.5 rounded-full text-sm">
+              <X size={16} />
+              Move mouse away to close
+            </div>
+            
+            {/* Media */}
+            <div className="relative">
+              {expandedMilestone.image && (
+                <img
+                  src={expandedMilestone.image}
+                  alt={expandedMilestone.title}
+                  className="w-full h-[60vh] object-contain bg-black"
+                />
+              )}
+              {expandedMilestone.video && (
+                <video
+                  src={expandedMilestone.video}
+                  className="w-full h-[60vh] object-contain bg-black"
+                  autoPlay
+                  muted
+                  loop
+                  playsInline
+                  controls
+                />
+              )}
+            </div>
+            
+            {/* Content */}
+            <div className="p-6 md:p-8">
+              <div
+                className={`inline-flex items-center gap-2 px-3 py-1 rounded-full text-xs font-medium mb-3 ${
+                  expandedMilestone.type === "achievement"
+                    ? "bg-yellow-500/10 text-yellow-600"
+                    : expandedMilestone.type === "expansion"
+                    ? "bg-primary/10 text-primary"
+                    : "bg-accent/10 text-accent"
+                }`}
+              >
+                {expandedMilestone.date}
+              </div>
+              <h3 className="text-2xl md:text-3xl font-heading font-bold text-foreground mb-3">
+                {expandedMilestone.title}
+              </h3>
+              <p className="text-muted-foreground text-lg leading-relaxed">
+                {expandedMilestone.description}
+              </p>
+            </div>
+          </div>
+        </div>
+      )}
     </section>
   );
 }
