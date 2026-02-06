@@ -9,20 +9,18 @@
  * 2. HeroSection - Main value proposition and CTAs
  * 3. ProblemSolutionSection - Traditional vs Smart comparison
  * 4. FeaturesSection - 6 key product features
- * 5. HowItWorksSection - 4-step onboarding process
- * 6. BenefitsSection - Benefits for homeowners and offices
- * 7. TestimonialsSection - Customer social proof
- * 8. PricingCTASection - Main conversion section
- * 9. FAQSection - Common questions answered
- * 10. Footer - Contact and legal info
+ * 5. JourneyTimelineSection - Company milestones and journey
+ * 6. TestimonialsSection - Customer social proof
+ * 7. PricingCTASection - Main conversion section
+ * 8. FAQSection - Common questions answered
+ * 9. Footer - Contact and legal info
  */
 
 import { Navbar } from "@/components/landing/Navbar";
 import { HeroSection } from "@/components/landing/HeroSection";
 import { ProblemSolutionSection } from "@/components/landing/ProblemSolutionSection";
 import { FeaturesSection } from "@/components/landing/FeaturesSection";
-import { HowItWorksSection } from "@/components/landing/HowItWorksSection";
-import { BenefitsSection } from "@/components/landing/BenefitsSection";
+import { JourneyTimelineSection } from "@/components/landing/JourneyTimelineSection";
 import { TestimonialsSection } from "@/components/landing/TestimonialsSection";
 import { PricingCTASection } from "@/components/landing/PricingCTASection";
 import { FAQSection } from "@/components/landing/FAQSection";
@@ -43,11 +41,8 @@ const Index = () => {
       {/* COMPONENT: Features Section */}
       <FeaturesSection />
       
-      {/* COMPONENT: How It Works Section */}
-      <HowItWorksSection />
-      
-      {/* COMPONENT: Benefits Section */}
-      <BenefitsSection />
+      {/* COMPONENT: Journey Timeline Section */}
+      <JourneyTimelineSection />
       
       {/* COMPONENT: Testimonials Section */}
       <TestimonialsSection />
