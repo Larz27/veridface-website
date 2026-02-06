@@ -1,10 +1,17 @@
 /**
  * COMPONENT: Journey Timeline Section
  * 
- * Shows the company's journey milestones in a visual timeline format.
+ * Shows the company's journey milestones in a visual timeline format with photos.
  */
 
 import { Trophy, Home, Building2, MapPin, Store, Calendar, Rocket } from "lucide-react";
+
+// Journey images
+import hackathonImg from "@/assets/journey/hackathon.jpg";
+import installationImg from "@/assets/journey/installation.jpg";
+import homeInstallationImg from "@/assets/journey/home-installation.jpg";
+import officeInstallationImg from "@/assets/journey/office-installation.jpg";
+import consumerFairImg from "@/assets/journey/consumer-fair.jpg";
 
 const milestones = [
   {
@@ -13,6 +20,7 @@ const milestones = [
     description: "Won 2nd place at the ID-Novate Hackathon, marking the beginning of our journey.",
     icon: Trophy,
     type: "achievement",
+    image: hackathonImg,
   },
   {
     date: "Late June 2025",
@@ -20,6 +28,7 @@ const milestones = [
     description: "Completed our very first residential smart lock installation for a Brunei homeowner.",
     icon: Home,
     type: "milestone",
+    image: installationImg,
   },
   {
     date: "Early October 2025",
@@ -27,6 +36,7 @@ const milestones = [
     description: "Expanded into the commercial sector with our first office security solution.",
     icon: Building2,
     type: "milestone",
+    image: homeInstallationImg,
   },
   {
     date: "Mid October 2025",
@@ -34,6 +44,7 @@ const milestones = [
     description: "Our first installation outside Bandar Seri Begawan, reaching more of Brunei.",
     icon: MapPin,
     type: "expansion",
+    image: officeInstallationImg,
   },
   {
     date: "January 2026",
@@ -48,6 +59,7 @@ const milestones = [
     description: "Showcased our products at our very first consumer fair, connecting directly with Bruneians.",
     icon: Calendar,
     type: "event",
+    image: consumerFairImg,
   },
   {
     date: "11-12 February 2026",
@@ -113,12 +125,23 @@ export function JourneyTimelineSection() {
                     }`}
                   >
                     <div
-                      className={`bg-background rounded-xl p-6 border shadow-sm transition-all duration-300 hover:shadow-md ${
+                      className={`bg-background rounded-xl p-6 border shadow-sm transition-all duration-300 hover:shadow-md overflow-hidden ${
                         isUpcoming
                           ? "border-accent/50 border-dashed"
                           : "border-border/50"
                       }`}
                     >
+                      {/* Image */}
+                      {milestone.image && (
+                        <div className="mb-4 -mx-6 -mt-6">
+                          <img
+                            src={milestone.image}
+                            alt={milestone.title}
+                            className="w-full h-48 object-cover"
+                          />
+                        </div>
+                      )}
+                      
                       {/* Date Badge */}
                       <div
                         className={`inline-flex items-center gap-2 px-3 py-1 rounded-full text-xs font-medium mb-3 ${
