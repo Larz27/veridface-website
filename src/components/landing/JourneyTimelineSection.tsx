@@ -225,11 +225,14 @@ export function JourneyTimelineSection() {
           onMouseLeave={handleMouseLeave}
         >
           <div className="relative w-full max-w-5xl max-h-[90vh] m-4 bg-background rounded-2xl overflow-hidden shadow-2xl animate-scale-in">
-            {/* Close hint */}
-            <div className="absolute top-4 right-4 z-10 flex items-center gap-2 bg-black/50 text-white px-3 py-1.5 rounded-full text-sm">
-              <X size={16} />
-              Move mouse away to close
-            </div>
+            {/* Close button */}
+            <button
+              onClick={() => setExpandedIndex(null)}
+              className="absolute top-4 right-4 z-10 flex items-center gap-2 bg-black/50 hover:bg-black/70 text-white px-4 py-2 rounded-full text-sm font-medium transition-colors cursor-pointer"
+            >
+              <X size={18} />
+              Close
+            </button>
             
             {/* Media */}
             <div className="relative">
