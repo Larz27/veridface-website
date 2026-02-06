@@ -12,6 +12,7 @@ import installationImg from "@/assets/journey/installation.jpg";
 import homeInstallationImg from "@/assets/journey/home-installation.jpg";
 import officeInstallationImg from "@/assets/journey/office-installation.jpg";
 import consumerFairImg from "@/assets/journey/consumer-fair.jpg";
+import kualaBelaitVideo from "@/assets/journey/kuala-belait.mp4";
 
 const milestones = [
   {
@@ -28,7 +29,7 @@ const milestones = [
     description: "Completed our very first residential smart lock installation for a Brunei homeowner.",
     icon: Home,
     type: "milestone",
-    image: installationImg,
+    image: homeInstallationImg,
   },
   {
     date: "Early October 2025",
@@ -36,7 +37,7 @@ const milestones = [
     description: "Expanded into the commercial sector with our first office security solution.",
     icon: Building2,
     type: "milestone",
-    image: homeInstallationImg,
+    image: installationImg,
   },
   {
     date: "Mid October 2025",
@@ -44,7 +45,7 @@ const milestones = [
     description: "Our first installation outside Bandar Seri Begawan, reaching more of Brunei.",
     icon: MapPin,
     type: "expansion",
-    image: officeInstallationImg,
+    video: kualaBelaitVideo,
   },
   {
     date: "January 2026",
@@ -52,6 +53,7 @@ const milestones = [
     description: "Secured our first commercial client, bringing enterprise-grade security to businesses.",
     icon: Store,
     type: "milestone",
+    image: officeInstallationImg,
   },
   {
     date: "28 Jan - 1 Feb 2026",
@@ -138,6 +140,20 @@ export function JourneyTimelineSection() {
                             src={milestone.image}
                             alt={milestone.title}
                             className="w-full h-48 object-cover"
+                          />
+                        </div>
+                      )}
+                      
+                      {/* Video */}
+                      {milestone.video && (
+                        <div className="mb-4 -mx-6 -mt-6">
+                          <video
+                            src={milestone.video}
+                            className="w-full h-48 object-cover"
+                            autoPlay
+                            muted
+                            loop
+                            playsInline
                           />
                         </div>
                       )}
