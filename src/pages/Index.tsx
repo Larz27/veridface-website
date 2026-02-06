@@ -41,9 +41,6 @@ const Index = () => {
       {/* COMPONENT: Features Section */}
       <FeaturesSection />
       
-      {/* COMPONENT: Journey Timeline Section */}
-      <JourneyTimelineSection />
-      
       {/* COMPONENT: Testimonials Section */}
       <TestimonialsSection />
       
@@ -52,6 +49,9 @@ const Index = () => {
       
       {/* COMPONENT: FAQ Section */}
       <FAQSection />
+      
+      {/* COMPONENT: Journey Timeline Section */}
+      <JourneyTimelineSection />
       
       {/* COMPONENT: Footer */}
       <Footer />
