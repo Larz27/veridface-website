@@ -71,30 +71,30 @@ export function ProductCatalogue() {
         </p>
       </div>
 
-      <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-4 md:gap-6">
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
         {products.map((product, index) => (
           <div
             key={index}
             onClick={() => setExpandedIndex(index)}
-            className="group bg-card rounded-xl border border-border/50 p-4 flex flex-col items-center text-center hover:shadow-lg hover:-translate-y-1 transition-all duration-300 cursor-pointer relative"
+            className="group bg-card rounded-xl border border-border/50 p-6 flex flex-col items-center text-center hover:shadow-lg hover:-translate-y-1 transition-all duration-300 cursor-pointer relative"
           >
             {product.badge && (
-              <span className="absolute top-2 right-2 bg-accent text-accent-foreground text-[10px] font-bold px-2 py-0.5 rounded-full">
+              <span className="absolute top-3 right-3 bg-accent text-accent-foreground text-xs font-bold px-3 py-1 rounded-full">
                 {product.badge}
               </span>
             )}
             <img
               src={product.image}
               alt={product.name}
-              className="w-full h-36 md:h-44 object-contain mb-3"
+              className="w-full h-48 md:h-56 object-contain mb-4"
             />
-            <h4 className="text-sm md:text-base font-heading font-bold text-foreground mb-1">
+            <h4 className="text-base md:text-lg font-heading font-bold text-foreground mb-2">
               {product.name}
             </h4>
-            <p className="text-xs md:text-sm text-muted-foreground leading-relaxed">
+            <p className="text-sm md:text-base text-muted-foreground leading-relaxed">
               {product.description}
             </p>
-            <span className="mt-3 text-xs text-primary font-medium opacity-0 group-hover:opacity-100 transition-opacity">
+            <span className="mt-4 text-sm text-primary font-medium opacity-0 group-hover:opacity-100 transition-opacity">
               View details →
             </span>
           </div>
