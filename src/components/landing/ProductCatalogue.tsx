@@ -108,7 +108,7 @@ export function ProductCatalogue() {
           onClick={() => setExpandedIndex(null)}
         >
           <div
-            className="relative w-full max-w-3xl max-h-[90vh] m-4 bg-background rounded-2xl overflow-hidden shadow-2xl animate-scale-in"
+            className="relative w-full max-w-3xl max-h-[80vh] mt-24 m-4 bg-background rounded-2xl overflow-hidden shadow-2xl animate-scale-in"
             onClick={(e) => e.stopPropagation()}
           >
             {/* Close button */}
@@ -120,13 +120,13 @@ export function ProductCatalogue() {
               Close
             </button>
 
-            <div className="overflow-y-auto max-h-[90vh]">
+            <div className="overflow-y-auto max-h-[80vh]">
               {/* Product Image */}
               <div className="bg-muted/30 p-8 flex justify-center">
                 <img
                   src={expandedProduct.image}
                   alt={expandedProduct.name}
-                  className="max-h-[40vh] object-contain"
+                  className="max-h-[30vh] object-contain"
                 />
               </div>
 
