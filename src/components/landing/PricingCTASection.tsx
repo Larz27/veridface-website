@@ -6,6 +6,7 @@
 
 import { Button } from "@/components/ui/button";
 import { ArrowRight, Check, Phone, Mail } from "lucide-react";
+import { ProductCatalogue } from "./ProductCatalogue";
 import AutoScroll from "embla-carousel-auto-scroll";
 import {
   Carousel,
@@ -39,7 +40,8 @@ export function PricingCTASection() {
       
       <div className="section-container relative z-10">
         <div className="max-w-5xl mx-auto">
-          {/* Badge */}
+          {/* Product Catalogue */}
+          <ProductCatalogue />
           <div className="text-center mb-8">
             <div className="inline-flex items-center gap-2 bg-primary/10 text-primary px-4 py-2 rounded-full mb-6">
               <span className="text-sm font-medium">Limited Time Offer</span>
