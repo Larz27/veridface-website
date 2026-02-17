@@ -70,7 +70,7 @@ export function FeaturesSection() {
               className="feature-card group"
               style={{ animationDelay: `${index * 0.1}s` }}
             >
-              <div className="w-14 h-14 rounded-xl bg-accent/10 flex items-center justify-center mb-6 group-hover:bg-accent/20 transition-colors duration-300">
+              <div className="w-14 h-14 rounded-2xl bg-accent/10 flex items-center justify-center mb-6 group-hover:bg-accent/20 transition-colors duration-300 shadow-clay-sm">
                 <feature.icon className="text-accent" size={28} />
               </div>
               <h3 className="text-xl font-heading font-bold text-foreground mb-3">

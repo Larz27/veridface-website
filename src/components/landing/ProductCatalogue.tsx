@@ -81,10 +81,10 @@ export function ProductCatalogue() {
           <div
             key={index}
             onClick={() => setExpandedIndex(index)}
-            className="group bg-card rounded-xl border border-border/50 p-6 flex flex-col items-center text-center hover:shadow-lg hover:-translate-y-1 transition-all duration-300 cursor-pointer relative"
+            className="group bg-card rounded-3xl border border-border/30 p-6 flex flex-col items-center text-center hover:-translate-y-1 transition-all duration-300 cursor-pointer relative shadow-clay hover:shadow-clay-lg"
           >
             {product.badge && (
-              <span className="absolute top-3 right-3 bg-accent text-accent-foreground text-xs font-bold px-3 py-1 rounded-full">
+              <span className="absolute top-3 right-3 bg-accent text-accent-foreground text-xs font-bold px-3 py-1 rounded-xl shadow-clay-sm">
                 {product.badge}
               </span>
             )}
@@ -93,10 +93,9 @@ export function ProductCatalogue() {
               alt={product.name}
               className="w-full h-48 md:h-56 object-contain mb-4"
             />
-            <h4 className="text-base md:text-lg font-heading font-bold text-foreground mb-1">
+            <h4 className="text-base md:text-lg font-heading font-bold text-foreground mb-2">
               {product.name}
             </h4>
-            <p className="text-lg font-heading font-bold text-accent mb-2">{product.price}</p>
             <p className="text-sm md:text-base text-muted-foreground leading-relaxed">
               {product.description}
             </p>
@@ -114,13 +113,13 @@ export function ProductCatalogue() {
           onClick={() => setExpandedIndex(null)}
         >
           <div
-            className="relative w-full max-w-3xl max-h-[85vh] mt-20 mx-4 bg-background rounded-2xl overflow-hidden shadow-2xl animate-scale-in"
+            className="relative w-full max-w-3xl max-h-[85vh] mt-20 mx-4 bg-card rounded-3xl overflow-hidden shadow-clay-lg animate-scale-in"
             onClick={(e) => e.stopPropagation()}
           >
             {/* Close button */}
             <button
               onClick={() => setExpandedIndex(null)}
-              className="absolute top-4 right-4 z-10 flex items-center gap-2 bg-black/50 hover:bg-black/70 text-white px-4 py-2 rounded-full text-sm font-medium transition-colors cursor-pointer"
+              className="absolute top-4 right-4 z-10 flex items-center gap-2 bg-foreground/50 hover:bg-foreground/70 text-background px-4 py-2 rounded-xl text-sm font-medium transition-colors cursor-pointer"
             >
               <X size={18} />
               Close
@@ -139,7 +138,7 @@ export function ProductCatalogue() {
               {/* Product Info */}
               <div className="p-6 md:p-8">
                 {expandedProduct.badge && (
-                  <span className="inline-block bg-accent text-accent-foreground text-xs font-bold px-3 py-1 rounded-full mb-3">
+                  <span className="inline-block bg-accent text-accent-foreground text-xs font-bold px-3 py-1 rounded-xl shadow-clay-sm mb-3">
                     {expandedProduct.badge}
                   </span>
                 )}
@@ -162,7 +161,7 @@ export function ProductCatalogue() {
                     {expandedProduct.features.map((feature, i) => (
                       <span
                         key={i}
-                        className="inline-flex items-center gap-1.5 bg-primary/10 text-primary text-sm px-3 py-1.5 rounded-full"
+                        className="inline-flex items-center gap-1.5 bg-primary/10 text-primary text-sm px-3 py-1.5 rounded-xl shadow-clay-sm"
                       >
                         {feature}
                       </span>
