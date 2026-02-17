@@ -40,7 +40,7 @@ export function Navbar() {
     <nav
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
         isScrolled
-          ? "bg-card/95 backdrop-blur-md shadow-card border-b border-border/50"
+          ? "bg-card/90 backdrop-blur-md shadow-clay-sm border-b border-border/30"
           : "bg-transparent"
       }`}
     >
@@ -72,12 +72,12 @@ export function Navbar() {
           {/* Toggle + CTA */}
           <div className="hidden md:flex items-center gap-4">
             {/* Home/Enterprise Toggle */}
-            <div className="flex items-center bg-muted/50 rounded-full p-1 border border-border/50">
+            <div className="flex items-center bg-muted/50 rounded-2xl p-1 border border-border/30 shadow-clay-sm">
               <button
                 onClick={() => navigate("/")}
-                className={`px-4 py-1.5 rounded-full text-sm font-medium transition-all duration-200 ${
+                className={`px-4 py-1.5 rounded-xl text-sm font-medium transition-all duration-200 ${
                   !isEnterprise 
-                    ? "bg-primary text-primary-foreground shadow-sm" 
+                    ? "bg-primary text-primary-foreground shadow-clay-sm" 
                     : "text-muted-foreground hover:text-foreground"
                 }`}
               >
@@ -85,9 +85,9 @@ export function Navbar() {
               </button>
               <button
                 onClick={() => navigate("/enterprise")}
-                className={`px-4 py-1.5 rounded-full text-sm font-medium transition-all duration-200 ${
+                className={`px-4 py-1.5 rounded-xl text-sm font-medium transition-all duration-200 ${
                   isEnterprise 
-                    ? "bg-primary text-primary-foreground shadow-sm" 
+                    ? "bg-primary text-primary-foreground shadow-clay-sm" 
                     : "text-muted-foreground hover:text-foreground"
                 }`}
               >
@@ -119,15 +119,15 @@ export function Navbar() {
           <div className="md:hidden py-4 border-t border-border/50 animate-fade-in">
             <div className="flex flex-col gap-4">
               {/* Mobile Toggle */}
-              <div className="flex items-center bg-muted/50 rounded-full p-1 border border-border/50 w-fit">
+              <div className="flex items-center bg-muted/50 rounded-2xl p-1 border border-border/30 shadow-clay-sm w-fit">
                 <button
                   onClick={() => {
                     navigate("/");
                     setIsMobileMenuOpen(false);
                   }}
-                  className={`px-4 py-1.5 rounded-full text-sm font-medium transition-all duration-200 ${
+                  className={`px-4 py-1.5 rounded-xl text-sm font-medium transition-all duration-200 ${
                     !isEnterprise 
-                      ? "bg-primary text-primary-foreground shadow-sm" 
+                      ? "bg-primary text-primary-foreground shadow-clay-sm" 
                       : "text-muted-foreground hover:text-foreground"
                   }`}
                 >
@@ -138,9 +138,9 @@ export function Navbar() {
                     navigate("/enterprise");
                     setIsMobileMenuOpen(false);
                   }}
-                  className={`px-4 py-1.5 rounded-full text-sm font-medium transition-all duration-200 ${
+                  className={`px-4 py-1.5 rounded-xl text-sm font-medium transition-all duration-200 ${
                     isEnterprise 
-                      ? "bg-primary text-primary-foreground shadow-sm" 
+                      ? "bg-primary text-primary-foreground shadow-clay-sm" 
                       : "text-muted-foreground hover:text-foreground"
                   }`}
                 >

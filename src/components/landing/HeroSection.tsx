@@ -63,7 +63,7 @@ export function HeroSection() {
           {/* Hero Image */}
           <div className="relative animate-fade-up stagger-2">
             <div className="relative z-10">
-              <img src={heroImage} alt="Veridface Smart Lock - Modern smart lock installed on a door" className="w-full max-w-lg mx-auto rounded-2xl shadow-hero" />
+              <img src={heroImage} alt="Veridface Smart Lock - Modern smart lock installed on a door" className="w-full max-w-lg mx-auto rounded-3xl shadow-clay-lg" />
             </div>
             {/* Decorative Elements */}
             <div className="absolute -top-4 -right-4 w-72 h-72 bg-accent/20 rounded-full blur-3xl" />
