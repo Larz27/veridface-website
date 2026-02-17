@@ -273,7 +273,7 @@ export function JourneyTimelineSection() {
           onClick={() => setExpandedIndex(null)}
         >
           <div
-            className="relative w-full max-w-5xl max-h-[90vh] m-4 bg-background rounded-2xl overflow-hidden shadow-2xl animate-scale-in"
+            className="relative w-full max-w-5xl max-h-[90vh] m-4 bg-background rounded-2xl overflow-hidden shadow-2xl animate-scale-in flex flex-col"
             onClick={(e) => e.stopPropagation()}
           >
             {/* Close button */}
@@ -285,47 +285,49 @@ export function JourneyTimelineSection() {
               Close
             </button>
 
-            {/* Media */}
-            <div className="relative">
-              {expandedMilestone.image && (
-                <img
-                  src={expandedMilestone.image}
-                  alt={expandedMilestone.title}
-                  className="w-full h-[50vh] object-contain bg-black"
-                />
-              )}
-              {(expandedMilestone as any).video && (
-                <video
-                  src={(expandedMilestone as any).video}
-                  className="w-full h-[50vh] object-contain bg-black"
-                  autoPlay
-                  muted
-                  loop
-                  playsInline
-                  controls
-                />
-              )}
-            </div>
-
-            {/* Content */}
-            <div className="p-6 md:p-8">
-              <div
-                className={`inline-flex items-center gap-2 px-3 py-1 rounded-full text-xs font-medium mb-3 ${
-                  expandedMilestone.type === "achievement"
-                    ? "bg-yellow-500/10 text-yellow-600"
-                    : expandedMilestone.type === "expansion"
-                    ? "bg-primary/10 text-primary"
-                    : "bg-accent/10 text-accent"
-                }`}
-              >
-                {expandedMilestone.date}
+            <div className="overflow-y-auto flex-1">
+              {/* Media */}
+              <div className="relative">
+                {expandedMilestone.image && (
+                  <img
+                    src={expandedMilestone.image}
+                    alt={expandedMilestone.title}
+                    className="w-full h-[40vh] md:h-[50vh] object-contain bg-black"
+                  />
+                )}
+                {(expandedMilestone as any).video && (
+                  <video
+                    src={(expandedMilestone as any).video}
+                    className="w-full h-[40vh] md:h-[50vh] object-contain bg-black"
+                    autoPlay
+                    muted
+                    loop
+                    playsInline
+                    controls
+                  />
+                )}
               </div>
-              <h3 className="text-2xl md:text-3xl font-heading font-bold text-foreground mb-3">
-                {expandedMilestone.title}
-              </h3>
-              <p className="text-muted-foreground text-base md:text-lg leading-relaxed">
-                {expandedMilestone.expandedDescription}
-              </p>
+
+              {/* Content */}
+              <div className="p-6 md:p-8">
+                <div
+                  className={`inline-flex items-center gap-2 px-3 py-1 rounded-full text-xs font-medium mb-3 ${
+                    expandedMilestone.type === "achievement"
+                      ? "bg-yellow-500/10 text-yellow-600"
+                      : expandedMilestone.type === "expansion"
+                      ? "bg-primary/10 text-primary"
+                      : "bg-accent/10 text-accent"
+                  }`}
+                >
+                  {expandedMilestone.date}
+                </div>
+                <h3 className="text-2xl md:text-3xl font-heading font-bold text-foreground mb-3">
+                  {expandedMilestone.title}
+                </h3>
+                <p className="text-muted-foreground text-base md:text-lg leading-relaxed pb-4">
+                  {expandedMilestone.expandedDescription}
+                </p>
+              </div>
             </div>
           </div>
         </div>
