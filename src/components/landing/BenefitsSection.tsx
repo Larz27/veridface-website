@@ -80,9 +80,9 @@ export function BenefitsSection() {
 
         <div className="grid lg:grid-cols-2 gap-8 lg:gap-16">
           {/* Homeowners */}
-          <div className="bg-background rounded-2xl p-8 border border-border/50">
+          <div className="bg-background rounded-3xl p-8 border border-border/30 shadow-clay">
             <div className="flex items-center gap-4 mb-8">
-              <div className="w-14 h-14 rounded-xl bg-accent/10 flex items-center justify-center">
+              <div className="w-14 h-14 rounded-2xl bg-accent/10 flex items-center justify-center shadow-clay-sm">
                 <Home className="text-accent" size={28} />
               </div>
               <div>
@@ -95,7 +95,7 @@ export function BenefitsSection() {
             <div className="space-y-6">
               {homeownerBenefits.map((benefit, index) => (
                 <div key={index} className="flex gap-4">
-                  <div className="w-10 h-10 rounded-lg bg-accent/10 flex items-center justify-center flex-shrink-0">
+                  <div className="w-10 h-10 rounded-xl bg-accent/10 flex items-center justify-center flex-shrink-0 shadow-clay-sm">
                     <benefit.icon className="text-accent" size={20} />
                   </div>
                   <div>
@@ -112,9 +112,9 @@ export function BenefitsSection() {
           </div>
 
           {/* Office Owners */}
-          <div className="bg-background rounded-2xl p-8 border border-border/50">
+          <div className="bg-background rounded-3xl p-8 border border-border/30 shadow-clay">
             <div className="flex items-center gap-4 mb-8">
-              <div className="w-14 h-14 rounded-xl bg-primary/10 flex items-center justify-center">
+              <div className="w-14 h-14 rounded-2xl bg-primary/10 flex items-center justify-center shadow-clay-sm">
                 <Building2 className="text-primary" size={28} />
               </div>
               <div>
@@ -127,7 +127,7 @@ export function BenefitsSection() {
             <div className="space-y-6">
               {officeBenefits.map((benefit, index) => (
                 <div key={index} className="flex gap-4">
-                  <div className="w-10 h-10 rounded-lg bg-primary/10 flex items-center justify-center flex-shrink-0">
+                  <div className="w-10 h-10 rounded-xl bg-primary/10 flex items-center justify-center flex-shrink-0 shadow-clay-sm">
                     <benefit.icon className="text-primary" size={20} />
                   </div>
                   <div>

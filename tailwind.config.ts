@@ -15,7 +15,7 @@ export default {
     extend: {
       fontFamily: {
         heading: ['"Plus Jakarta Sans"', 'system-ui', 'sans-serif'],
-        body: ['Inter', 'system-ui', 'sans-serif'],
+        body: ['Nunito', 'system-ui', 'sans-serif'],
       },
       colors: {
         border: "hsl(var(--border))",
@@ -68,10 +68,14 @@ export default {
         sm: "calc(var(--radius) - 4px)",
       },
       boxShadow: {
+        'clay': 'var(--shadow-clay)',
+        'clay-sm': 'var(--shadow-clay-sm)',
+        'clay-lg': 'var(--shadow-clay-lg)',
+        'clay-inset': 'var(--shadow-clay-inset)',
         'glow': 'var(--shadow-glow)',
-        'card': 'var(--shadow-md)',
-        'card-hover': 'var(--shadow-lg)',
-        'hero': 'var(--shadow-xl)',
+        'card': 'var(--shadow-clay)',
+        'card-hover': 'var(--shadow-clay-lg)',
+        'hero': 'var(--shadow-clay-lg)',
       },
       keyframes: {
         "accordion-down": {
