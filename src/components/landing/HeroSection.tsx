@@ -5,7 +5,7 @@
  */
 
 import { Button } from "@/components/ui/button";
-import { Shield, Smartphone, ArrowRight } from "lucide-react";
+import { Shield, ArrowRight } from "lucide-react";
 import heroImage from "@/assets/hero-smartlock.jpg";
 const WHATSAPP_LINK = "https://wa.me/6737331298";
 export function HeroSection() {
@@ -38,12 +38,6 @@ export function HeroSection() {
               <Button variant="hero" size="xl" onClick={() => window.open(WHATSAPP_LINK, '_blank')}>
                 Request a Demo
                 <ArrowRight size={20} />
-              </Button>
-              <Button variant="hero-outline" size="xl" onClick={() => document.getElementById('how-it-works')?.scrollIntoView({
-              behavior: 'smooth'
-            })}>
-                <Smartphone size={20} />
-                See How It Works
               </Button>
             </div>
 

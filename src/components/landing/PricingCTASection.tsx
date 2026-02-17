@@ -44,7 +44,7 @@ export function PricingCTASection() {
           <ProductCatalogue />
           <div className="text-center mb-8">
             <div className="inline-flex items-center gap-2 bg-primary/10 text-primary px-4 py-2 rounded-full mb-6">
-              <span className="text-sm font-medium">Limited Time Offer</span>
+              <span className="text-sm font-medium">🔥 Limited Time Offer — Only 4 Units Left!</span>
             </div>
             
             <h2 className="text-3xl md:text-4xl lg:text-5xl font-heading font-bold text-foreground mb-6">
