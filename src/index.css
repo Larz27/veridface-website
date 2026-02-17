@@ -11,16 +11,16 @@
 
 @layer base {
   :root {
-    /* Primary: Soft Deep Blue */
-    --primary: 226 65% 45%;
+    /* Primary: Brand Deep Navy #0d2883 */
+    --primary: 231 83% 28%;
     --primary-foreground: 0 0% 100%;
     
-    /* Secondary: Lavender */
-    --secondary: 230 40% 88%;
-    --secondary-foreground: 226 65% 30%;
+    /* Secondary: Light Blue #86aed5 */
+    --secondary: 213 49% 68%;
+    --secondary-foreground: 231 83% 28%;
     
-    /* Accent: Warm Coral-Orange */
-    --accent: 18 80% 55%;
+    /* Accent: Brand Deep Navy (same as primary for consistency) */
+    --accent: 231 83% 28%;
     --accent-foreground: 0 0% 100%;
     
     /* Background & Surfaces — Warm Off-White */
