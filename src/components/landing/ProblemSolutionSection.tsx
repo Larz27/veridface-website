@@ -39,7 +39,7 @@ export function ProblemSolutionSection() {
 
         <div className="grid md:grid-cols-2 gap-8 lg:gap-16">
           {/* Problems */}
-          <div className="bg-destructive/5 rounded-2xl p-8 border border-destructive/20">
+          <div className="bg-destructive/5 rounded-3xl p-8 border border-destructive/20 shadow-clay">
             <h3 className="text-xl font-heading font-bold text-foreground mb-6 flex items-center gap-3">
               <div className="w-10 h-10 rounded-full bg-destructive/10 flex items-center justify-center">
                 <X className="text-destructive" size={20} />
@@ -60,7 +60,7 @@ export function ProblemSolutionSection() {
           </div>
 
           {/* Solutions */}
-          <div className="bg-accent/5 rounded-2xl p-8 border border-accent/20">
+          <div className="bg-accent/5 rounded-3xl p-8 border border-accent/20 shadow-clay">
             <h3 className="text-xl font-heading font-bold text-foreground mb-6 flex items-center gap-3">
               <div className="w-10 h-10 rounded-full bg-accent/10 flex items-center justify-center">
                 <Check className="text-accent" size={20} />
