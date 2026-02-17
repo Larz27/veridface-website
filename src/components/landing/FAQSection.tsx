@@ -11,7 +11,7 @@
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 const faqs = [{
   question: "How does the smart lock work without internet?",
-  answer: "Our smart locks have multiple access methods. Even without internet, you can use the physical keypad PIN, fingerprint sensor, or the included backup key. Internet connectivity enables remote access and notifications."
+  answer: "Our smart locks do not need internet to function. All basic features — fingerprint, PIN code, face recognition, and physical key — work entirely on battery power. The only function that requires internet is the connection to the Tuya app for remote access and notifications."
 }, {
   question: "Is the installation process complicated?",
   answer: "Not at all! Our certified technicians handle everything. Most installations take less than 3 hours and work with standard Brunei door types. We'll ensure everything is properly set up before we leave."
