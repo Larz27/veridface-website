@@ -87,11 +87,11 @@ export function PricingCTASection() {
 
           {/* CTA Buttons */}
           <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
-            <Button variant="hero" size="xl" className="bg-primary text-primary-foreground hover:bg-primary/90" onClick={() => window.open(WHATSAPP_LINK, '_blank')}>
+            <Button variant="hero" size="xl" onClick={() => window.open(WHATSAPP_LINK, '_blank')}>
               Request Free Demo
               <ArrowRight size={20} />
             </Button>
-            <Button variant="outline" size="xl" className="border-2 border-primary text-primary hover:bg-primary hover:text-primary-foreground" onClick={() => window.open(WHATSAPP_LINK, '_blank')}>
+            <Button variant="hero-outline" size="xl" onClick={() => window.open(WHATSAPP_LINK, '_blank')}>
               <Phone size={20} />
               Call: +673 7331298
             </Button>
