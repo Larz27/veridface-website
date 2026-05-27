@@ -1,39 +1,60 @@
 /**
  * COMPONENT: Hero Section
- * 
+ *
  * The main attention-grabbing section with headline, subheadline, and CTAs.
  */
 
 import { Button } from "@/components/ui/button";
-import { Shield, ArrowRight } from "lucide-react";
-import heroImage from "@/assets/hero-smartlock.jpg";
+import { ArrowRight } from "lucide-react";
+import AutoScroll from "embla-carousel-auto-scroll";
+import {
+  Carousel,
+  CarouselContent,
+  CarouselItem,
+} from "@/components/ui/carousel";
+import mainModel from "@/assets/hero/main-model.jpeg";
+import newModel from "@/assets/hero/new-model.jpeg";
+import handleModel from "@/assets/hero/handle-model.jpeg";
+
 const WHATSAPP_LINK = "https://wa.me/6737331298";
+
+const heroImages = [
+  { src: mainModel, alt: "Veridface flagship smart lock installed on a modern door" },
+  { src: newModel, alt: "Veridface smart lock with touchscreen on a wooden door" },
+  { src: handleModel, alt: "Veridface smart handle lock installed on an interior door" },
+];
+
 export function HeroSection() {
-  return <section id="home" className="relative min-h-screen flex items-center pt-20 overflow-hidden" style={{
-    background: "var(--gradient-hero)"
-  }}>
+  return (
+    <section
+      id="home"
+      className="relative min-h-screen flex items-center pt-20 overflow-hidden"
+      style={{ background: "var(--gradient-hero)" }}
+    >
       {/* Background Pattern */}
       <div className="absolute inset-0 opacity-[0.03]">
-        <div className="absolute inset-0" style={{
-        backgroundImage: `radial-gradient(circle at 1px 1px, hsl(var(--primary)) 1px, transparent 0)`,
-        backgroundSize: "40px 40px"
-      }} />
+        <div
+          className="absolute inset-0"
+          style={{
+            backgroundImage: `radial-gradient(circle at 1px 1px, hsl(var(--primary)) 1px, transparent 0)`,
+            backgroundSize: "40px 40px",
+          }}
+        />
       </div>
 
       <div className="section-container relative z-10">
         <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
           {/* Content */}
           <div className="text-center lg:text-left">
-            {/* Headline */}
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-heading font-bold text-foreground leading-tight mb-6 animate-fade-up">
               Unlock the Future of{" "}
               <span className="text-accent">Home Security</span>
             </h1>
 
-            {/* Subheadline */}
-            <p className="text-lg md:text-xl text-muted-foreground mb-8 max-w-xl mx-auto lg:mx-0 animate-fade-up stagger-1">Smart locks designed for Brunei homes and offices. Control access from anywhere, anytime, no keys required. Experience security that fits your modern lifestyle.</p>
+            <p className="text-lg md:text-xl text-muted-foreground mb-8 max-w-xl mx-auto lg:mx-0 animate-fade-up stagger-1">
+              Smart locks designed for Brunei homes and offices. Control access from anywhere, anytime, no keys required. Experience security that fits your modern lifestyle.
+            </p>
 
-            {/* CTAs */}
             <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start animate-fade-up stagger-2">
               <Button variant="hero" size="xl" onClick={() => window.open(WHATSAPP_LINK, '_blank')}>
                 Request a Demo
@@ -41,7 +62,6 @@ export function HeroSection() {
               </Button>
             </div>
 
-            {/* Trust Indicators */}
             <div className="flex items-center gap-8 mt-10 justify-center lg:justify-start animate-fade-up stagger-3">
               <div className="text-center">
                 <p className="text-2xl font-heading font-bold text-foreground">Free</p>
@@ -60,10 +80,32 @@ export function HeroSection() {
             </div>
           </div>
 
-          {/* Hero Image */}
+          {/* Hero Carousel */}
           <div className="relative animate-fade-up stagger-2">
-            <div className="relative z-10">
-              <img src={heroImage} alt="Veridface Smart Lock - Modern smart lock installed on a door" className="w-full max-w-lg mx-auto rounded-3xl shadow-clay-lg" />
+            <div className="relative z-10 max-w-lg mx-auto">
+              <Carousel
+                opts={{ align: "center", loop: true }}
+                plugins={[
+                  AutoScroll({
+                    speed: 0.8,
+                    stopOnInteraction: false,
+                    stopOnMouseEnter: true,
+                  }),
+                ]}
+                className="w-full"
+              >
+                <CarouselContent>
+                  {heroImages.map((image, index) => (
+                    <CarouselItem key={index}>
+                      <img
+                        src={image.src}
+                        alt={image.alt}
+                        className="w-full aspect-[3/4] object-cover rounded-3xl shadow-clay-lg"
+                      />
+                    </CarouselItem>
+                  ))}
+                </CarouselContent>
+              </Carousel>
             </div>
             {/* Decorative Elements */}
             <div className="absolute -top-4 -right-4 w-72 h-72 bg-accent/20 rounded-full blur-3xl" />
@@ -71,5 +113,6 @@ export function HeroSection() {
           </div>
         </div>
       </div>
-    </section>;
+    </section>
+  );
 }
