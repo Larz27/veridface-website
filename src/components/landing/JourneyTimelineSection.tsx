@@ -17,6 +17,7 @@ import consumerFairImg from "@/assets/journey/consumer-fair.jpg";
 import slidingDoorImg from "@/assets/journey/sliding-door.jpg";
 import startupSummitImg from "@/assets/journey/startup-summit.jpg";
 import kualaBelaitVideo from "@/assets/journey/kuala-belait.mp4";
+import bazingaStoreImg from "@/assets/journey/bazinga-store.mp4";
 
 const milestones = [
   {
@@ -90,6 +91,15 @@ const milestones = [
     icon: Rocket,
     type: "event",
     image: startupSummitImg,
+  },
+  {
+    date: "July 2026",
+    title: "Bazinga - Unmanned Retail Store",
+    description: "Launched our first unmanned retail store, Bazinga, showcasing our smart lock technology in a commercial setting.",
+    expandedDescription: "Bazinga's fully unmanned, 24/7 cashless convenience store is now open at the Peak Club Grandstand. Customers scan to enter, select their products, place them at the checkout counter, and pay by bank card or Pocket.",
+    icon: Store,
+    type: "milestone",
+    image: bazingaStoreImg,
   },
 ];
 
