@@ -15,7 +15,7 @@ export function ProductCatalogue() {
     <div className="mb-16">
       <div className="text-center mb-10">
         <h2 className="text-3xl md:text-4xl lg:text-5xl font-heading font-bold text-foreground mb-4">
-          Our <span className="text-accent">Product Range</span>
+          Our <span className="text-accent">Pricing & Product Range</span>
         </h2>
         <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
           Browse our full collection of smart locks. Tap the cover to view the catalogue.
