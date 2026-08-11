@@ -73,19 +73,28 @@ export function TestimonialsSection() {
                 <div className="feature-card relative h-full">
                   {/* Quote Icon */}
                   <Quote className="absolute top-6 right-6 text-accent/20" size={40} />
-                  
+
                   {/* Rating */}
                   <div className="flex gap-1 mb-4">
                     {Array.from({ length: testimonial.rating }).map((_, i) => (
                       <Star key={i} className="text-accent fill-accent" size={18} />
                     ))}
                   </div>
-                  
+
                   {/* Content */}
                   <p className="text-muted-foreground mb-6 relative z-10 leading-relaxed">
                     "{testimonial.content}"
                   </p>
-                  
+
+                  {/* {Video} */}
+                  <div className="w-full h-48 rounded-lg overflow-hidden mb-6">
+                    <video
+                      src={`videos/testimonial-${index + 1}.mp4`}
+                      controls
+                      className="w-full h-full object-cover"
+                    ></video>
+                  </div>
+
                   {/* Author */}
                   <div className="flex items-center gap-4 mt-auto">
                     <div className="w-12 h-12 rounded-full bg-accent/10 flex items-center justify-center">
