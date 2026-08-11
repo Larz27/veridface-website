@@ -80,15 +80,15 @@ export function EnterpriseComingSoon() {
 
           <div className="w-14 h-14 rounded-xl bg-primary/10 flex items-center justify-center mx-auto mb-4">
             <div class="enterprise-video-container">
-              <iframe
-                src="bazinga-store.mp4"
-                title="Bazinga Store Video"
-                frameborder="0"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                allowfullscreen
-                className="enterprise-video"
-              ></iframe>
-            </div>
+                <iframe
+                  src="bazinga-store.mp4"
+                  title="Bazinga Store Video"
+                  frameborder="0"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                  allowfullscreen
+                  className="enterprise-video"
+                ></iframe>
+              </div>
             <h1>Bazinga</h1>
           </div>
 
