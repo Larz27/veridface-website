@@ -13,7 +13,7 @@ import verifaceLogo from "@/assets/veridface-logo.png";
 const navLinks = [
   { name: "Home", href: "#home" },
   { name: "Features", href: "#features" },
-  { name: "Pricing", href: "#pricing" },
+  { name: "Pricing & Product", href: "#pricing" },
   { name: "Our Journey", href: "#journey" },
   { name: "Contact", href: "#contact" },
 ];
