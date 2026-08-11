@@ -17,6 +17,7 @@ import consumerFairImg from "@/assets/journey/consumer-fair.jpg";
 import slidingDoorImg from "@/assets/journey/sliding-door.jpg";
 import startupSummitImg from "@/assets/journey/startup-summit.jpg";
 import kualaBelaitVideo from "@/assets/journey/kuala-belait.mp4";
+import bazingaStoreImg from "@/assets/journey/bazinga.jpg";
 
 const milestones = [
   {
@@ -91,6 +92,15 @@ const milestones = [
     type: "event",
     image: startupSummitImg,
   },
+  {
+    date: "July 2026",
+    title: "Bazinga - Unmanned Retail Store",
+    description: "Launched our first unmanned retail store, Bazinga, showcasing our smart lock technology in a commercial setting.",
+    expandedDescription: "Bazinga's fully unmanned, 24/7 cashless convenience store is now open at the Peak Club Grandstand. Customers scan to enter, select their products, place them at the checkout counter, and pay by bank card or Pocket.",
+    icon: Store,
+    type: "milestone",
+    image: bazingaStoreImg,
+  },
 ];
 
 export function JourneyTimelineSection() {
@@ -164,17 +174,16 @@ export function JourneyTimelineSection() {
                 >
                   {/* Icon Node on timeline */}
                   <div
-                    className={`relative z-10 w-12 h-12 rounded-full flex items-center justify-center shadow-lg mb-4 ${
-                      isUpcoming
+                    className={`relative z-10 w-12 h-12 rounded-full flex items-center justify-center shadow-lg mb-4 ${isUpcoming
                         ? "bg-accent/20 border-2 border-accent border-dashed"
                         : milestone.type === "achievement"
-                        ? "bg-yellow-500"
-                        : milestone.type === "expansion"
-                        ? "bg-primary"
-                        : milestone.type === "event"
-                        ? "bg-accent"
-                        : "bg-accent"
-                    }`}
+                          ? "bg-yellow-500"
+                          : milestone.type === "expansion"
+                            ? "bg-primary"
+                            : milestone.type === "event"
+                              ? "bg-accent"
+                              : "bg-accent"
+                      }`}
                   >
                     <milestone.icon
                       size={22}
@@ -184,11 +193,10 @@ export function JourneyTimelineSection() {
 
                   {/* Date */}
                   <div
-                    className={`text-xs font-medium mb-3 px-3 py-1 rounded-full ${
-                      milestone.type === "achievement"
+                    className={`text-xs font-medium mb-3 px-3 py-1 rounded-full ${milestone.type === "achievement"
                         ? "bg-yellow-500/10 text-yellow-600"
                         : "bg-primary/10 text-primary"
-                    }`}
+                      }`}
                   >
                     {milestone.date}
                   </div>
@@ -311,13 +319,12 @@ export function JourneyTimelineSection() {
               {/* Content */}
               <div className="p-6 md:p-8">
                 <div
-                  className={`inline-flex items-center gap-2 px-3 py-1 rounded-full text-xs font-medium mb-3 ${
-                    expandedMilestone.type === "achievement"
+                  className={`inline-flex items-center gap-2 px-3 py-1 rounded-full text-xs font-medium mb-3 ${expandedMilestone.type === "achievement"
                       ? "bg-yellow-500/10 text-yellow-600"
                       : expandedMilestone.type === "expansion"
-                      ? "bg-primary/10 text-primary"
-                      : "bg-accent/10 text-accent"
-                  }`}
+                        ? "bg-primary/10 text-primary"
+                        : "bg-accent/10 text-accent"
+                    }`}
                 >
                   {expandedMilestone.date}
                 </div>
