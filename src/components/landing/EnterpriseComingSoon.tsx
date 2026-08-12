@@ -8,7 +8,7 @@ import { Button } from "@/components/ui/button";
 import { Building2, Users, Shield, Clock, ArrowLeft } from "lucide-react";
 import { Link } from "react-router-dom";
 import verifaceLogo from "@/assets/veridface-logo.png";
-import { Bazinga } from "@/assets/journey/bazinga-store.mp4";
+import Bazinga from "@/assets/journey/bazinga-store.mp4";
 
 const WHATSAPP_LINK = "https://wa.me/6737331298?text=Hi%2C%20I'm%20interested%20in%20Veridface%20Enterprise%20solutions.";
 
@@ -82,7 +82,7 @@ export function EnterpriseComingSoon() {
               {/* Right Side: Video */}
               <div className="mb-8">
                 <iframe
-                  src={Bazinga}
+                  video src={Bazinga}
                   title="Bazinga Store Video"
                   frameborder="0"
                   allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
