@@ -17,7 +17,7 @@ const quickLinks = [{
   href: "#faq"
 }];
 export function Footer() {
-  return <footer id="contact" className="text-background py-16 bg-[#FFA500]">
+  return <footer id="contact" className="text-background py-16 bg-[#fe765c]">
       <div className="section-container">
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-12 mb-12">
           {/* Brand Column */}
