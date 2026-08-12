@@ -12,6 +12,7 @@ import {
   CarouselContent,
   CarouselItem,
 } from "@/components/ui/carousel";
+import Testiomonial from "@/assets/journey/testimonial.mp4";
 
 const testimonials = [
   {
@@ -86,15 +87,6 @@ export function TestimonialsSection() {
                     "{testimonial.content}"
                   </p>
 
-                  {/* {Video} */}
-                  <div className="w-full h-48 rounded-lg overflow-hidden mb-6">
-                    <video
-                      src={`videos/testimonial-${index + 1}.mp4`}
-                      controls
-                      className="w-full h-full object-cover"
-                    ></video>
-                  </div>
-
                   {/* Author */}
                   <div className="flex items-center gap-4 mt-auto">
                     <div className="w-12 h-12 rounded-full bg-accent/10 flex items-center justify-center">
@@ -116,7 +108,23 @@ export function TestimonialsSection() {
             ))}
           </CarouselContent>
         </Carousel>
+
+        {/* {Video Testimonial} */}
+        <div className="section-container">
+          <div className="relative w-full h-screen overflow-hidden mb-8">
+            <iframe
+              video src={Testiomonial}
+              title="Bazinga Store Video"
+              frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; fullscreen;"
+              allowfullscreen
+              className="enterprise-video"
+            ></iframe>
+          </div>
+        </div>
       </div>
-    </section>
+
+    </div>
+    </section >
   );
 }
