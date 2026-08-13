@@ -108,6 +108,8 @@ export function TestimonialsSection() {
             ))}
           </CarouselContent>
         </Carousel>
+      </div>
+      <section className="section-wrapper">
         <div className="section-container">
           <div className="relative w-full h-screen overflow-hidden mb-8">
             <iframe
@@ -120,7 +122,7 @@ export function TestimonialsSection() {
             ></iframe>
           </div>
         </div>
-      </div>
+      </section>
     </section >
   );
 }
