@@ -114,8 +114,10 @@ export function TestimonialsSection() {
     // { Video Testimonial Section }
       <section className="section-wrapper">
         <div className="section-container">
-          <div className="relative w-full h-screen overflow-hidden mb-2">
+          {/* <div className="relative w-full h-screen overflow-hidden mb-2"> */}
             <iframe
+              width="100%"
+              height="100%"
               video src={Testiomonial}
               title="Bazinga Store Video"
               frameborder="0"
