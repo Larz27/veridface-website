@@ -78,7 +78,7 @@ export function EnterpriseComingSoon() {
                   frameborder="0"
                   allow="accelerometer; autoplay; clipboard-write; encrypted-media; fullscreen;"
                   allowfullscreen
-                  className="enterprise-video"
+                  className="enterprise-video items-center justify-center w-full h-full object-cover"
                 ></iframe>
               </div>
             </div>
