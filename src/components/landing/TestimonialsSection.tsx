@@ -114,7 +114,7 @@ export function TestimonialsSection() {
           <div className="section-container">
             <div className="w-full max-w-3xl aspect-video">
               <iframe
-                video src={Bazinga}
+                video src={Testiomonial}
                 title="Bazinga Store Video"
                 class="w-full h-full"
                 frameborder="0"
