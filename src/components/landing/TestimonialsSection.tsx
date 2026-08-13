@@ -110,23 +110,21 @@ export function TestimonialsSection() {
         </Carousel>
       </div>
     </section >
+    
+    <div className="section-content">
+      <div className="section-container">
+        <div className="w-full max-w-3xl aspect-video">
+          <iframe
+            video src={Bazinga}
+            title="Bazinga Store Video"
+            class="w-full h-full"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; fullscreen;"
+            allowfullscreen
+            className="enterprise-video"
+          ></iframe>
+        </div>
+      </div>
+    </div>
   );
 }
-
-// {Video Testimonial Section }
-
-<div className="section-content">
-  <div className="section-container">
-    <div className="w-full max-w-3xl aspect-video">
-      <iframe
-        video src={Bazinga}
-        title="Bazinga Store Video"
-        class="w-full h-full"
-        frameborder="0"
-        allow="accelerometer; autoplay; clipboard-write; encrypted-media; fullscreen;"
-        allowfullscreen
-        className="enterprise-video"
-      ></iframe>
-    </div>
-  </div>
-</div>
