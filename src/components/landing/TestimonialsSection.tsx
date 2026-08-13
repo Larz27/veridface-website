@@ -121,4 +121,9 @@ export function TestimonialsSection() {
       Your browser does not support the video tag.
     </video>
   </div>
+  <div>
+    <p className="text-center text-muted-foreground mt-4">
+      hello!
+    </p>
+  </div>
 </section>
