@@ -74,7 +74,7 @@ export function EnterpriseComingSoon() {
               <div className="relative w-full h-screen overflow-hidden mb-8">
                 <iframe
                   video src={Bazinga}
-                  title="Bazinga Store Video"
+                  title="Bazinga Video"
                   frameborder="0"
                   allow="accelerometer; autoplay; clipboard-write; encrypted-media; fullscreen;"
                   allowfullscreen
