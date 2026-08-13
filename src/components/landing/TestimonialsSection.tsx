@@ -112,27 +112,13 @@ export function TestimonialsSection() {
     </section >
 
     // { Video Testimonial Section }
-      <section className="section-wrapper">
-        {/* <div className="section-container">
-          {/* <div className="relative w-full h-screen overflow-hidden mb-2"> */}
-            {/* <iframe
-              width="100%"
-              height="100%"
-              video src={Testiomonial}
-              title="Bazinga Store Video"
-              frameborder="0"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; fullscreen;"
-              allowfullscreen
-              className="enterprise-video"
-            ></iframe>
-          </div> */}
-        {/* </div> */}
+        <div className="section-container">
+          <video width="100%" height="100%" controls className="enterprise-video items-center justify-center">
+            <source src={Testiomonial} type="video/mp4" />
+            Your browser does not support the video tag.
+          </video>
+        </div>
 
-        <video width="100%" height="100%" controls className="enterprise-video items-center justify-center">
-          <source src={Testiomonial} type="video/mp4" />
-          Your browser does not support the video tag.
-        </video>
-      </section >
 
   );
 }
