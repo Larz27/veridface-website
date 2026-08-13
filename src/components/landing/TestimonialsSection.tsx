@@ -109,18 +109,18 @@ export function TestimonialsSection() {
           </CarouselContent>
         </Carousel>
       </div>
-      <div className="section-container">
-        <div className="relative w-full h-screen overflow-hidden mb-8">
-          <iframe
-            video src={Testimonial}
-            title="Testimonial Video"
-            frameborder="0"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; fullscreen;"
-            allowfullscreen
-            className="enterprise-video items-center justify-center w-full h-full object-cover"
-          ></iframe>
-        </div>
-      </div>
     </section >
   );
 }
+<div className="section-container">
+  <div className="relative w-full h-screen overflow-hidden mb-8">
+    <iframe
+      video src={Testimonial}
+      title="Testimonial Video"
+      frameborder="0"
+      allow="accelerometer; autoplay; clipboard-write; encrypted-media; fullscreen;"
+      allowfullscreen
+      className="enterprise-video items-center justify-center w-full h-full object-cover"
+    ></iframe>
+  </div>
+</div>
