@@ -114,14 +114,31 @@ export function TestimonialsSection() {
 }
 
 // {Video Testimonial Section }
-  <div className="section-container">
-    <video width="100%" height="100%" controls className="enterprise-video items-center justify-center">
+<section className="section-wrapper">
+  <section className="section-container">
+    <video autoplay muted loop playsinline controls width="640">
       <source src={Testiomonial} type="video/mp4" />
       Your browser does not support the video tag.
     </video>
-  </div>
-  <div>
-    <p className="text-center text-muted-foreground mt-4">
-      hello!
-    </p>
-  </div>
+  </section>
+</section>
+
+const video = document.getElementById("testimonial-video");
+const playBtn = document.getElementById("play-btn");
+
+video.muted = true;
+video.playInline = true;
+
+video.play()
+  .then(() => {
+    console.log("Autoplay started successfully!");
+  })
+  .catch((error) => {
+    console.warn("Autoplay was blocked by the browser:", error);
+
+    play.Btn.style.display = "block";
+    playBtn.addEventListener('click', () => {
+      video.play();
+      playBtn.style.display = "none";
+    });
+  });
