@@ -115,7 +115,7 @@ export function TestimonialsSection() {
 <div className="section-container">
   <div className="relative w-full h-screen overflow-hidden mb-8">
     <iframe
-      video src={Testimonial}
+      video src={Testiomonial}
       title="Testimonial Video"
       frameborder="0"
       allow="accelerometer; autoplay; clipboard-write; encrypted-media; fullscreen;"
