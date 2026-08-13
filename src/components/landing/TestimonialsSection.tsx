@@ -122,23 +122,3 @@ export function TestimonialsSection() {
     </video>
   </section>
 </section>
-
-const video = document.getElementById("testimonial-video");
-const playBtn = document.getElementById("play-btn");
-
-video.muted = true;
-video.playInline = true;
-
-video.play()
-  .then(() => {
-    console.log("Autoplay started successfully!");
-  })
-  .catch((error) => {
-    console.warn("Autoplay was blocked by the browser:", error);
-
-    play.Btn.style.display = "block";
-    playBtn.addEventListener('click', () => {
-      video.play();
-      playBtn.style.display = "none";
-    });
-  });
