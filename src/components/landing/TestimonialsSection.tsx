@@ -114,7 +114,6 @@ export function TestimonialsSection() {
 }
 
 // {Video Testimonial Section }
-<section className="section-wrapper">
   <div className="section-container">
     <video width="100%" height="100%" controls className="enterprise-video items-center justify-center">
       <source src={Testiomonial} type="video/mp4" />
@@ -126,4 +125,3 @@ export function TestimonialsSection() {
       hello!
     </p>
   </div>
-</section>
